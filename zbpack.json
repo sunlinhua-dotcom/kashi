@@ -1,0 +1,6 @@
+{
+  "build_command": "",
+  "start_command": "",
+  "output_dir": ".",
+  "framework": "static"
+}
