@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>主角光环 ✦ MAIN CHARACTER AURA — 卡诗 GLOSS Wave 2 IMC 比稿</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@200;300;400;500;600;700;800&family=Noto+Serif+SC:wght@200;400;500;600;700;900&family=Noto+Sans+SC:wght@200;300;400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'glaze': {
+          50: '#FEF7F4',
+          100: '#FCEDE7',
+          200: '#F8D5CB',
+          300: '#F2B5A8',
+          400: '#EA9587',
+          500: '#D4A574',  // rose gold
+          600: '#B8855E',
+          700: '#9A6849',
+        },
+        'rose': {
+          'gold': '#D4A574',
+          'pink': '#F4D5D5',
+          'glaze': '#FFB7C5',
+        },
+        'ink': '#0F0F0F',
+        'cream': '#FAF6F0',
+        'mirror': '#C8C8CC',
+      },
+      fontFamily: {
+        'display': ['Playfair Display', 'Cormorant Garamond', 'Noto Serif SC', 'serif'],
+        'serif-cn': ['Noto Serif SC', 'serif'],
+        'sans': ['Inter', 'Noto Sans SC', 'sans-serif'],
+        'sans-cn': ['Noto Sans SC', 'sans-serif'],
+      },
+    }
+  }
+}
+</script>
+<style>
+  *{ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', 'Noto Sans SC', sans-serif;
+    background: #0F0F0F;
+    color: #FAF6F0;
+    overflow-x: hidden;
+  }
+  .font-display { font-family: 'Playfair Display', 'Noto Serif SC', serif; letter-spacing: -0.02em; }
+  .font-serif-cn { font-family: 'Noto Serif SC', serif; }
+  .font-cn { font-family: 'Noto Sans SC', sans-serif; }
+
+  /* SECTION SNAP */
+  .section { min-height: 100vh; padding: 6rem 2rem; position: relative; }
+  @media (min-width:768px) { .section { padding: 8rem 4rem; } }
+
+  /* SUBTLE GRAIN OVERLAY */
+  .grain::before {
+    content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.4' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    z-index: 1;
+  }
+
+  /* NUMBER COUNTER FONT */
+  .num-display { font-family: 'Playfair Display', serif; font-weight: 900; line-height: 0.85; letter-spacing: -0.04em; }
+
+  /* GLOW EFFECT */
+  .glow-text { text-shadow: 0 0 60px rgba(212,165,116,0.35), 0 0 120px rgba(244,213,213,0.2); }
+  .glow-pink { box-shadow: 0 0 80px rgba(244,183,197,0.25), 0 0 160px rgba(244,213,213,0.15); }
+
+  /* ROSE GOLD GRADIENT */
+  .rose-gold-text {
+    background: linear-gradient(135deg, #F8D5CB 0%, #D4A574 35%, #FFB7C5 65%, #D4A574 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* ANIMATION */
+  @keyframes fadeUp { from { opacity:0; transform: translateY(40px); } to { opacity:1; transform: translateY(0); } }
+  @keyframes pulse-glow { 0%,100% { opacity: .8; } 50% { opacity: 1; } }
+  @keyframes drift { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-20px) rotate(3deg); } }
+  .animate-fade { animation: fadeUp 1.2s cubic-bezier(.2,.8,.2,1) both; }
+  .animate-pulse-glow { animation: pulse-glow 4s ease-in-out infinite; }
+  .animate-drift { animation: drift 8s ease-in-out infinite; }
+
+  .reveal { opacity: 0; transform: translateY(40px); transition: opacity 1s cubic-bezier(.2,.8,.2,1), transform 1s cubic-bezier(.2,.8,.2,1); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  /* DOT NAV */
+  .nav-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(250,246,240,.25); transition: all .4s; cursor: pointer; }
+  .nav-dot.active { background: #D4A574; box-shadow: 0 0 12px #D4A574; transform: scale(1.5); }
+  .nav-dot:hover { background: rgba(212,165,116,.7); }
+
+  /* DATA LOGIC FLOW BLOCKS */
+  .logic-arrow {
+    width: 2px; height: 60px; margin: 0 auto;
+    background: linear-gradient(to bottom, transparent, rgba(212,165,116,0.6), transparent);
+    position: relative;
+  }
+  .logic-arrow::after {
+    content: '↓'; position: absolute; bottom: -8px; left: 50%; transform: translateX(-50%);
+    color: #D4A574; font-size: 18px;
+  }
+
+  /* SECTION DIVIDER LINES */
+  .v-line {
+    width: 1px; height: 60px;
+    background: linear-gradient(to bottom, transparent, rgba(212,165,116,0.4), transparent);
+    margin: 2rem auto;
+  }
+
+  /* BACKGROUND BLOOM */
+  .bloom { position: absolute; pointer-events: none; opacity: .4; mix-blend-mode: screen; filter: blur(80px); border-radius: 50%; z-index: 0; }
+  .bloom-1 { width: 600px; height: 600px; background: radial-gradient(circle, #F4D5D5 0%, transparent 70%); }
+  .bloom-2 { width: 500px; height: 500px; background: radial-gradient(circle, #D4A574 0%, transparent 70%); }
+  .bloom-3 { width: 400px; height: 400px; background: radial-gradient(circle, #FFB7C5 0%, transparent 70%); }
+
+  /* CARD HOVER */
+  .card { transition: all .5s cubic-bezier(.2,.8,.2,1); }
+  .card:hover { transform: translateY(-6px); box-shadow: 0 30px 60px -15px rgba(212,165,116,0.15); }
+
+  /* IMAGE REVEAL */
+  .img-reveal { position: relative; overflow: hidden; }
+  .img-reveal img { transition: transform 1.2s cubic-bezier(.2,.8,.2,1); }
+  .img-reveal:hover img { transform: scale(1.04); }
+
+  /* MARQUEE */
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .marquee-track { display: flex; animation: marquee 60s linear infinite; }
+
+  /* PROGRESS BAR FILL */
+  @keyframes fill-w { from { width: 0; } to { width: var(--w); } }
+  .bar-fill { animation: fill-w 1.5s cubic-bezier(.2,.8,.2,1) forwards; }
+
+  /* GENTLE SCROLLBAR */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #0F0F0F; }
+  ::-webkit-scrollbar-thumb { background: #D4A574; border-radius: 3px; }
+</style>
+</head>
+<body class="bg-ink text-cream">
+
+<!-- ░░░ FIXED DOT NAV ░░░ -->
+<nav class="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden md:flex flex-col gap-3">
+  <a href="#hero" class="nav-dot" data-label="Hero"></a>
+  <a href="#brief" class="nav-dot" data-label="Brief"></a>
+  <a href="#data" class="nav-dot" data-label="Data"></a>
+  <a href="#insight" class="nav-dot" data-label="Insight"></a>
+  <a href="#leap" class="nav-dot" data-label="Big Idea"></a>
+  <a href="#manifesto" class="nav-dot" data-label="Manifesto"></a>
+  <a href="#ta" class="nav-dot" data-label="TA"></a>
+  <a href="#wave1" class="nav-dot" data-label="Wave 1"></a>
+  <a href="#wave2" class="nav-dot" data-label="Wave 2"></a>
+  <a href="#bestie" class="nav-dot" data-label="Bestie"></a>
+  <a href="#cafe" class="nav-dot" data-label="Café"></a>
+  <a href="#phasing" class="nav-dot" data-label="Phasing"></a>
+  <a href="#kv" class="nav-dot" data-label="KV"></a>
+  <a href="#outcome" class="nav-dot" data-label="Outcome"></a>
+  <a href="#why" class="nav-dot" data-label="Why us"></a>
+</nav>
+
+<!-- ░░░ TOP BRAND BAR ░░░ -->
+<header class="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-ink/40 border-b border-glaze-500/10">
+  <div class="max-w-[1600px] mx-auto px-6 md:px-12 py-4 flex justify-between items-center text-xs tracking-[0.3em] uppercase">
+    <div class="font-display italic text-cream/60">Kérastase × Glossy Girls</div>
+    <div class="text-cream/50 hidden md:block">Wave 2 · IMC Pitch · 2026</div>
+    <div class="text-glaze-500">v 2.0</div>
+  </div>
+</header>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- ░░░ 00 · HERO · BIG IDEA REVEAL ░░░ -->
+<!-- ════════════════════════════════════════ -->
+<section id="hero" class="section grain relative flex items-center justify-center text-center overflow-hidden">
+  <div class="bloom bloom-1 absolute -top-40 -left-40"></div>
+  <div class="bloom bloom-2 absolute -bottom-40 -right-40"></div>
+
+  <div class="absolute inset-0 z-10 opacity-50">
+    <img src="../images/kv01-master-hero.png" alt="" class="w-full h-full object-cover" onerror="this.style.display='none'">
+    <div class="absolute inset-0 bg-gradient-to-b from-ink via-ink/30 to-ink"></div>
+  </div>
+
+  <div class="relative z-20 max-w-6xl mx-auto reveal">
+    <div class="text-xs tracking-[0.6em] uppercase text-glaze-500 mb-8">A Kérastase Pitch · MAY 2026</div>
+
+    <div class="font-display italic text-2xl md:text-3xl text-cream/70 mb-3">卡诗 釉光玫瑰 系列</div>
+    <h1 class="font-display font-black text-7xl md:text-[10rem] leading-[0.85] mb-8 rose-gold-text glow-text">主角光环</h1>
+    <div class="font-display italic text-3xl md:text-5xl text-cream/90 mb-2 tracking-wide">MAIN CHARACTER</div>
+    <div class="font-display italic text-3xl md:text-5xl text-cream/90 mb-12 tracking-[0.3em]">A · U · R · A</div>
+
+    <div class="h-px w-32 bg-glaze-500/40 mx-auto mb-8"></div>
+
+    <p class="font-serif-cn text-2xl md:text-3xl text-cream/80 leading-relaxed mb-2">主角的光，</p>
+    <p class="font-serif-cn text-2xl md:text-3xl text-cream/80 leading-relaxed mb-8">从一抹釉光开始。</p>
+    <p class="font-display italic text-base md:text-xl text-glaze-500 tracking-wider">THE GLOSS OF THE MAIN CHARACTER.</p>
+  </div>
+
+  <div class="absolute bottom-12 left-1/2 -translate-x-1/2 text-glaze-500 text-xs tracking-[0.3em] flex flex-col items-center gap-3 z-20 animate-pulse-glow">
+    <span>SCROLL · 开演</span>
+    <div class="w-px h-12 bg-glaze-500/40"></div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- ░░░ 01 · BRIEF FACTS ░░░ -->
+<!-- ════════════════════════════════════════ -->
+<section id="brief" class="section relative bg-cream text-ink">
+  <div class="max-w-[1500px] mx-auto">
+
+    <div class="text-xs tracking-[0.6em] uppercase text-glaze-600 mb-4">Chapter 01 · The Brief</div>
+    <h2 class="font-display text-5xl md:text-7xl mb-2 leading-[0.95]">客户给我们的，</h2>
+    <h2 class="font-display italic text-5xl md:text-7xl mb-12 leading-[0.95] rose-gold-text">是十条铁律。</h2>
+
+    <p class="font-serif-cn max-w-3xl text-lg md:text-xl mb-16 text-ink/70 leading-relaxed">
+      Wave 2 比稿 BRIEF 写明：客户已经为这场战役锁定了 <span class="text-glaze-600 font-semibold">10 条硬约束</span>。
+      它们既是束缚，也是创意的边界条件——能在这些边界内长出真正的 Big Idea，才是世界级的回答。
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-x-12 gap-y-6 mb-20">
+      <!-- Constraint cards -->
+      <div class="border-l-2 border-glaze-500 pl-6 py-2">
+        <div class="text-xs tracking-widest text-glaze-600 mb-1">C1 · STRUCTURE</div>
+        <div class="font-serif-cn text-lg">一个 Big Idea 大帽子，贯穿两 Wave</div>
+      </div>
+      <div class="border-l-2 border-glaze-500 pl-6 py-2">
+        <div class="text-xs tracking-widest text-glaze-600 mb-1">C2 · MASK</div>
+        <div class="font-serif-cn text-lg">发膜必须有功效，不能纯情绪</div>
+      </div>
+      <div class="border-l-2 border-glaze-500 pl-6 py-2">
+        <div class="text-xs tracking-widest text-glaze-600 mb-1">C3 · MIST</div>
+        <div class="font-serif-cn text-lg">香水必须态度向，不能有数字</div>
+      </div>
+      <div class="border-l-2 border-glaze-500 pl-6 py-2">
+        <div class="text-xs tracking-widest text-glaze-600 mb-1">C4 · TA</div>
+        <div class="font-serif-cn text-lg">客群延续「Glossy Girls 高光女孩」</div>
+      </div>
+      <div class="border-l-2 border-glaze-500 pl-6 py-2">
+        <div class="text-xs tracking-widest text-glaze-600 mb-1">C5 · ASSET</div>
+        <div class="font-serif-cn text-lg">沿用「玫瑰沁入发，一顺定高光」句式</div>
+      </div>
+      <div class="border-l-2 border-glaze-500 pl-6 py-2">
+        <div class="text-xs tracking-widest text-glaze-600 mb-1">C6 · GIFTING</div>
+        <div class="font-serif-cn text-lg">礼盒已锁：银色 / 圆形 / 4 Tier</div>
+      </div>
+      <div class="border-l-2 border-glaze-500 pl-6 py-2">
+        <div class="text-xs tracking-widest text-glaze-600 mb-1">C7 · IP</div>
+        <div class="font-serif-cn text-lg">Café/Bistro/甜品店 联名包店共创</div>
+      </div>
+      <div class="border-l-2 border-glaze-500 pl-6 py-2">
+        <div class="text-xs tracking-widest text-glaze-600 mb-1">C8 · VENUE</div>
+        <div class="font-serif-cn text-lg">不能是酒店（上月已用）</div>
+      </div>
+      <div class="border-l-2 border-glaze-500 pl-6 py-2">
+        <div class="text-xs tracking-widest text-glaze-600 mb-1">C9 · OPP</div>
+        <div class="font-serif-cn text-lg">必须解决 Wave 1 「刚洗反而油」舆情</div>
+      </div>
+      <div class="border-l-2 border-glaze-500 pl-6 py-2">
+        <div class="text-xs tracking-widest text-glaze-600 mb-1">C10 · DIFF</div>
+        <div class="font-serif-cn text-lg">香水定位区别于 PADA / KIKA</div>
+      </div>
+    </div>
+
+    <!-- Sales targets table -->
+    <div class="border-t border-glaze-500/30 pt-12 mb-12">
+      <div class="text-xs tracking-[0.5em] text-glaze-600 mb-6">SALES TARGET · WAVE 2</div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="card bg-cream border border-glaze-500/30 rounded-2xl p-6">
+          <div class="text-glaze-600 text-xs tracking-widest mb-2">釉光奶皮子发膜</div>
+          <div class="font-display text-4xl mb-1">¥390</div>
+          <div class="text-ink/60 text-sm">200ml · 7月上市</div>
+          <div class="mt-3 text-xs text-glaze-700 font-semibold">→ 第二大发膜 SKU</div>
+        </div>
+        <div class="card bg-cream border border-glaze-500/30 rounded-2xl p-6">
+          <div class="text-glaze-600 text-xs tracking-widest mb-2">釉光小香雾</div>
+          <div class="font-display text-4xl mb-1">¥360</div>
+          <div class="text-ink/60 text-sm">30ml · 8月上市</div>
+          <div class="mt-3 text-xs text-glaze-700 font-semibold">→ 15K 支首期目标</div>
+        </div>
+        <div class="card bg-cream border border-glaze-500/30 rounded-2xl p-6">
+          <div class="text-glaze-600 text-xs tracking-widest mb-2">小粉珠精油</div>
+          <div class="font-display text-4xl mb-1">¥320</div>
+          <div class="text-ink/60 text-sm">45ml · 涨价至 6 月</div>
+          <div class="mt-3 text-xs text-glaze-700 font-semibold">→ 销售翻倍</div>
+        </div>
+        <div class="card bg-cream border border-glaze-500/30 rounded-2xl p-6">
+          <div class="text-glaze-600 text-xs tracking-widest mb-2">Bestie Gifting</div>
+          <div class="font-display text-4xl mb-1">4 Tier</div>
+          <div class="text-ink/60 text-sm">银色 / 圆形 / 8月上线</div>
+          <div class="mt-3 text-xs text-glaze-700 font-semibold">→ 招募 Younger 客群</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-xs text-ink/40 italic">数据来源：Kérastase BRIEF Slide 1, 30, 49, 53 · 语音 Brief 全文 · Excel 微博官博数据 · 2026.05.06 内部沟通</div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- ░░░ 02 · DATA · WAVE 1 RECAP ░░░ -->
+<!-- ════════════════════════════════════════ -->
+<section id="data" class="section grain relative overflow-hidden">
+  <div class="bloom bloom-3 absolute top-20 right-20"></div>
+
+  <div class="max-w-[1500px] mx-auto relative z-10">
+    <div class="text-xs tracking-[0.6em] uppercase text-glaze-500 mb-4">Chapter 02 · Wave 1 Data</div>
+    <h2 class="font-display text-5xl md:text-7xl mb-2 leading-[0.95]">Wave 1 已经</h2>
+    <h2 class="font-display italic text-5xl md:text-7xl mb-12 leading-[0.95] rose-gold-text">证明了什么。</h2>
+
+    <p class="font-serif-cn max-w-3xl text-lg md:text-xl mb-16 text-cream/70 leading-relaxed">
+      2025 年 7-8 月，「玫瑰沁入发，一顺定高光」打出了一场漂亮的开局。
+      <span class="text-glaze-500 font-semibold">3,700 万 / 5.8 万瓶 / PSR 94.1%</span>
+      已是教科书级数据。Wave 2 的目标，是把这场胜利从 <span class="italic">"产品胜利"</span> 升格为 <span class="italic rose-gold-text">"文化胜利"</span>。
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8 mb-20">
+      <div class="border border-glaze-500/30 rounded-3xl p-8 bg-gradient-to-br from-glaze-500/10 to-transparent card">
+        <div class="num-display text-7xl rose-gold-text mb-2">3,700<span class="text-3xl ml-2">万</span></div>
+        <div class="text-cream/70 text-sm tracking-widest">SELL-OUT 销售额（RMB）</div>
+        <div class="text-cream/40 text-xs mt-3">Wave 1 全渠道首发 2 月</div>
+      </div>
+      <div class="border border-glaze-500/30 rounded-3xl p-8 bg-gradient-to-br from-glaze-500/10 to-transparent card">
+        <div class="num-display text-7xl rose-gold-text mb-2">5.8<span class="text-3xl ml-2">万</span></div>
+        <div class="text-cream/70 text-sm tracking-widest">小粉珠售出（瓶）</div>
+        <div class="text-cream/40 text-xs mt-3">单品月销冠</div>
+      </div>
+      <div class="border border-glaze-500/30 rounded-3xl p-8 bg-gradient-to-br from-glaze-500/10 to-transparent card">
+        <div class="num-display text-7xl rose-gold-text mb-2">94.1<span class="text-3xl">%</span></div>
+        <div class="text-cream/70 text-sm tracking-widest">SOCIAL PSR</div>
+        <div class="text-cream/40 text-xs mt-3">UGC 5,634 条</div>
+      </div>
+    </div>
+
+    <!-- Channel #1 row -->
+    <div class="border-y border-glaze-500/20 py-8 mb-12">
+      <div class="text-xs tracking-[0.5em] text-glaze-500 mb-6">FULL CHANNEL · NO. 1</div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div><div class="font-display text-4xl mb-1">天猫</div><div class="text-cream/50 text-xs">#1 HAIRCARE</div></div>
+        <div><div class="font-display text-4xl mb-1">京东</div><div class="text-cream/50 text-xs">#1 NEW SET</div></div>
+        <div><div class="font-display text-4xl mb-1">抖音</div><div class="text-cream/50 text-xs">#1 HAIR OIL</div></div>
+        <div><div class="font-display text-4xl mb-1">丝芙兰</div><div class="text-cream/50 text-xs">#1 HAIRCARE</div></div>
+      </div>
+    </div>
+
+    <!-- BUT: Pain points -->
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="rounded-2xl bg-glaze-500/5 border border-glaze-500/20 p-6">
+        <div class="text-glaze-500 text-xs tracking-widest mb-2">⚠ PAIN POINT 01</div>
+        <div class="font-serif-cn text-xl mb-2">"香味太冲，不像玫瑰"</div>
+        <div class="text-cream/50 text-xs">41.7% 提及香味，PSR 仅 82.5% — Wave 2 须升级</div>
+      </div>
+      <div class="rounded-2xl bg-glaze-500/5 border border-glaze-500/20 p-6">
+        <div class="text-glaze-500 text-xs tracking-widest mb-2">⚠ PAIN POINT 02</div>
+        <div class="font-serif-cn text-xl mb-2">"刚洗完头反而油"</div>
+        <div class="text-cream/50 text-xs">质地负反馈高频出现 — Wave 2 须重塑质地叙事</div>
+      </div>
+      <div class="rounded-2xl bg-glaze-500/5 border border-glaze-500/20 p-6">
+        <div class="text-glaze-500 text-xs tracking-widest mb-2">⚠ PAIN POINT 03</div>
+        <div class="font-serif-cn text-xl mb-2">"滴管难用 / 球瓶易摔"</div>
+        <div class="text-cream/50 text-xs">28.8% 提及包装 — Wave 2 礼盒升级机会</div>
+      </div>
+    </div>
+
+    <div class="mt-12 text-xs text-cream/30 italic">数据来源：BRIEF Slide 21-24 社交聆听 · 数据周期 2025.07.01-08.14 · UGC 5,634 条</div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- ░░░ 03 · INSIGHT · CULTURAL EXCAVATION ░░░ -->
+<!-- ════════════════════════════════════════ -->
+<section id="insight" class="section relative bg-cream text-ink overflow-hidden">
+  <div class="max-w-[1500px] mx-auto">
+    <div class="text-xs tracking-[0.6em] uppercase text-glaze-600 mb-4">Chapter 03 · Cultural Insight</div>
+    <h2 class="font-display text-5xl md:text-7xl mb-2 leading-[0.95]">我们做了一件</h2>
+    <h2 class="font-display italic text-5xl md:text-7xl mb-12 leading-[0.95] rose-gold-text">英语广告人做不到的事。</h2>
+
+    <p class="font-serif-cn max-w-4xl text-lg md:text-xl mb-20 text-ink/70 leading-relaxed">
+      我们调研了 Cannes Lions 2024-25 美容获奖案例、Sol de Janeiro / Gisou 等爆款香水、Kérastase 全球新作、上海武康-安福联名实战、小红书 2026 趋势词……
+      最后，我们在<span class="text-glaze-700 font-semibold">中文</span>里挖到了一个被埋了的金矿。
+    </p>
+
+    <!-- INSIGHT 01 -->
+    <div class="grid md:grid-cols-12 gap-8 mb-16 items-start">
+      <div class="md:col-span-2">
+        <div class="font-display italic text-7xl text-glaze-500/80">01</div>
+      </div>
+      <div class="md:col-span-10 border-l border-glaze-500/30 pl-8">
+        <div class="text-xs tracking-[0.4em] uppercase text-glaze-600 mb-3">LINGUISTIC GOLD · 中文双关</div>
+        <h3 class="font-display text-3xl md:text-5xl mb-6 leading-tight">中文里的「<span class="rose-gold-text">高光</span>」，<br>同时是 3 个意思。</h3>
+        <div class="grid md:grid-cols-3 gap-6 mb-6">
+          <div class="bg-glaze-500/5 rounded-2xl p-6 border border-glaze-500/20">
+            <div class="text-glaze-700 text-xs tracking-widest mb-2">语义 ①</div>
+            <div class="font-serif-cn text-xl mb-2">美发的 <span class="font-semibold">高光</span></div>
+            <div class="text-ink/60 text-sm">hair gloss / highlight · 产品功能</div>
+          </div>
+          <div class="bg-glaze-500/5 rounded-2xl p-6 border border-glaze-500/20">
+            <div class="text-glaze-700 text-xs tracking-widest mb-2">语义 ②</div>
+            <div class="font-serif-cn text-xl mb-2">人生的 <span class="font-semibold">高光</span></div>
+            <div class="text-ink/60 text-sm">life high-light moment · 情绪体验</div>
+          </div>
+          <div class="bg-glaze-500/5 rounded-2xl p-6 border border-glaze-500/20">
+            <div class="text-glaze-700 text-xs tracking-widest mb-2">语义 ③</div>
+            <div class="font-serif-cn text-xl mb-2">主角的 <span class="font-semibold">光环</span></div>
+            <div class="text-ink/60 text-sm">main character aura · 身份赋权</div>
+          </div>
+        </div>
+        <div class="text-glaze-700 font-semibold text-lg italic">"英语美妆品牌做不到这一层。这是中文护发品牌的语义独占机会。"</div>
+      </div>
+    </div>
+
+    <div class="v-line"></div>
+
+    <!-- INSIGHT 02 -->
+    <div class="grid md:grid-cols-12 gap-8 mb-16 items-start">
+      <div class="md:col-span-2">
+        <div class="font-display italic text-7xl text-glaze-500/80">02</div>
+      </div>
+      <div class="md:col-span-10 border-l border-glaze-500/30 pl-8">
+        <div class="text-xs tracking-[0.4em] uppercase text-glaze-600 mb-3">2026 ZEITGEIST · 当下文化母题</div>
+        <h3 class="font-display text-3xl md:text-5xl mb-6 leading-tight">"<span class="rose-gold-text">主角光环</span>" 是小红书<br>最炽热的自我表达。</h3>
+        <div class="grid md:grid-cols-2 gap-8 mb-6">
+          <div>
+            <div class="space-y-3">
+              <div class="flex justify-between items-center bg-glaze-500/5 rounded-xl px-5 py-3 border border-glaze-500/20">
+                <span class="font-serif-cn">主角光环</span>
+                <span class="font-display text-glaze-700 font-bold">32 万贴 · 4.2 亿阅读</span>
+              </div>
+              <div class="flex justify-between items-center bg-glaze-500/5 rounded-xl px-5 py-3 border border-glaze-500/20">
+                <span class="font-serif-cn">高光时刻</span>
+                <span class="font-display text-glaze-700 font-bold">287 万 贴</span>
+              </div>
+              <div class="flex justify-between items-center bg-glaze-500/5 rounded-xl px-5 py-3 border border-glaze-500/20">
+                <span class="font-serif-cn">自带高光</span>
+                <span class="font-display text-glaze-700 font-bold">92 万 贴</span>
+              </div>
+              <div class="flex justify-between items-center bg-glaze-500/5 rounded-xl px-5 py-3 border border-glaze-500/20">
+                <span class="font-serif-cn">柔软力（2026 新词）</span>
+                <span class="font-display text-glaze-700 font-bold">小红书 Top 10</span>
+              </div>
+            </div>
+          </div>
+          <div class="text-ink/70">
+            <div class="font-serif-cn italic mb-3">小红书原话：</div>
+            <ul class="space-y-3 text-sm">
+              <li class="border-l-2 border-glaze-500 pl-3 italic">"做自己人生的主角，不当任何人的女配。"</li>
+              <li class="border-l-2 border-glaze-500 pl-3 italic">"主角光环不是天赋，是每天的开机仪式。"</li>
+              <li class="border-l-2 border-glaze-500 pl-3 italic">"我的人生我自己上 BGM。"</li>
+              <li class="border-l-2 border-glaze-500 pl-3 italic">"她有她的光环，我有我的。"</li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-glaze-700 font-semibold text-lg italic">"至今没有任何品牌把"主角光环"和"高光美发"绑定。这是空白战场。"</div>
+      </div>
+    </div>
+
+    <div class="v-line"></div>
+
+    <!-- INSIGHT 03 -->
+    <div class="grid md:grid-cols-12 gap-8 mb-16 items-start">
+      <div class="md:col-span-2">
+        <div class="font-display italic text-7xl text-glaze-500/80">03</div>
+      </div>
+      <div class="md:col-span-10 border-l border-glaze-500/30 pl-8">
+        <div class="text-xs tracking-[0.4em] uppercase text-glaze-600 mb-3">CANNES LIONS RULE · 国际获奖法则</div>
+        <h3 class="font-display text-3xl md:text-5xl mb-6 leading-tight">2024-25 美容获奖法则：<br><span class="rose-gold-text">连接自我价值，否则不获奖。</span></h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-glaze-500/5 rounded-2xl p-6 border border-glaze-500/20">
+            <div class="text-glaze-700 text-xs tracking-widest mb-2">GLASS GP · DOVE</div>
+            <div class="font-serif-cn text-lg mb-2">"Real Beauty"</div>
+            <div class="text-ink/60 text-sm">21 周年长青：hair = identity politics</div>
+          </div>
+          <div class="bg-glaze-500/5 rounded-2xl p-6 border border-glaze-500/20">
+            <div class="text-glaze-700 text-xs tracking-widest mb-2">FILM GP · L'ORÉAL PARIS</div>
+            <div class="font-serif-cn text-lg mb-2">"The Final Copy of Ilon Specht"</div>
+            <div class="text-ink/60 text-sm">slogan as feminist artifact</div>
+          </div>
+        </div>
+        <div class="text-glaze-700 font-semibold text-lg italic mt-6">"指令：不能只讲我们的玫瑰多好，必须讲——我们的玫瑰，让你看见自己的光。"</div>
+      </div>
+    </div>
+
+    <div class="v-line"></div>
+
+    <!-- INSIGHT 04 -->
+    <div class="grid md:grid-cols-12 gap-8 mb-8 items-start">
+      <div class="md:col-span-2">
+        <div class="font-display italic text-7xl text-glaze-500/80">04</div>
+      </div>
+      <div class="md:col-span-10 border-l border-glaze-500/30 pl-8">
+        <div class="text-xs tracking-[0.4em] uppercase text-glaze-600 mb-3">BLANK SPACE · 闺蜜营销空白</div>
+        <h3 class="font-display text-3xl md:text-5xl mb-6 leading-tight">中国"闺蜜美发"<span class="rose-gold-text">教科书级 campaign</span><br>至今为零。</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-glaze-500/5 rounded-2xl p-6 border border-glaze-500/20">
+            <div class="num-display text-4xl rose-gold-text mb-2">$1.4T</div>
+            <div class="text-ink/60 text-sm">中国她经济规模</div>
+          </div>
+          <div class="bg-glaze-500/5 rounded-2xl p-6 border border-glaze-500/20">
+            <div class="num-display text-4xl rose-gold-text mb-2">70<span class="text-2xl">%</span></div>
+            <div class="text-ink/60 text-sm">小红书女性用户占比</div>
+          </div>
+          <div class="bg-glaze-500/5 rounded-2xl p-6 border border-glaze-500/20">
+            <div class="num-display text-4xl rose-gold-text mb-2">29.8 → 31.3</div>
+            <div class="text-ink/60 text-sm">Y25 圣诞 Bestie 礼盒带来的客群年龄下沉（vs 品牌均值）</div>
+          </div>
+        </div>
+        <div class="text-glaze-700 font-semibold text-lg italic mt-6">"闺蜜（guimì）= 在你闺房里的朋友。比英文 bestie 多一层 intimacy。"</div>
+      </div>
+    </div>
+
+    <div class="text-xs text-ink/40 italic mt-12">数据来源：China Skinny RED 2026 · Cannes Lions 2024-25 winner archives · iClick "She Economy" · Kérastase Bestie Gifting Y25 internal data</div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- ░░░ 04 · LEAP · BIG IDEA BIRTH ░░░ -->
+<!-- ════════════════════════════════════════ -->
+<section id="leap" class="section grain relative overflow-hidden flex items-center">
+  <div class="bloom bloom-1 absolute -top-40 -left-40"></div>
+  <div class="bloom bloom-2 absolute -bottom-40 -right-40"></div>
+
+  <div class="max-w-[1500px] mx-auto relative z-10 w-full">
+
+    <div class="text-xs tracking-[0.6em] uppercase text-glaze-500 mb-4">Chapter 04 · The Leap</div>
+    <h2 class="font-display text-5xl md:text-7xl mb-2 leading-[0.95]">从这里，</h2>
+    <h2 class="font-display italic text-5xl md:text-7xl mb-20 leading-[0.95] rose-gold-text">起飞。</h2>
+
+    <!-- LOGIC FLOW DIAGRAM -->
+    <div class="bg-glaze-500/5 backdrop-blur-md border border-glaze-500/20 rounded-3xl p-8 md:p-16 mb-20">
+      <div class="text-xs tracking-[0.6em] uppercase text-glaze-500 text-center mb-8">CREATIVE LOGIC CHAIN</div>
+
+      <div class="text-center max-w-3xl mx-auto">
+        <div class="font-serif-cn text-cream/60 text-xs tracking-widest uppercase mb-2">DATA</div>
+        <div class="font-serif-cn text-xl mb-3">中国 GenZ 「高光」词汇极热 + 卡诗 Wave 1 资产可延续</div>
+
+        <div class="logic-arrow"></div>
+
+        <div class="font-serif-cn text-cream/60 text-xs tracking-widest uppercase mb-2">INSIGHT</div>
+        <div class="font-serif-cn text-xl mb-3">「高光」中文双关：<span class="text-glaze-500">美发 × 人生 × 主角光环</span></div>
+
+        <div class="logic-arrow"></div>
+
+        <div class="font-serif-cn text-cream/60 text-xs tracking-widest uppercase mb-2">LEAP</div>
+        <div class="font-serif-cn text-2xl md:text-3xl mb-3 rose-gold-text font-semibold">把卡诗从"高光美发品牌"<br>升格为"主角光环品牌"</div>
+
+        <div class="logic-arrow"></div>
+
+        <div class="font-serif-cn text-cream/60 text-xs tracking-widest uppercase mb-2">EXECUTION</div>
+        <div class="font-serif-cn text-base text-cream/80">双 Wave / 闺蜜礼盒 / IP Pop-Up / 全渠道传播</div>
+      </div>
+    </div>
+
+    <!-- BIG IDEA REVEAL -->
+    <div class="text-center max-w-5xl mx-auto">
+      <div class="text-xs tracking-[0.6em] uppercase text-glaze-500 mb-4 animate-pulse-glow">— THE BIG IDEA —</div>
+      <h3 class="font-display font-black text-7xl md:text-[9rem] leading-[0.85] rose-gold-text glow-text mb-6">主角光环</h3>
+      <div class="font-display italic text-2xl md:text-4xl text-cream/90 tracking-wider mb-2">MAIN CHARACTER</div>
+      <div class="font-display italic text-2xl md:text-4xl text-cream/90 tracking-[0.3em] mb-12">A · U · R · A</div>
+      <div class="h-px w-32 bg-glaze-500/40 mx-auto mb-8"></div>
+      <p class="font-serif-cn text-3xl md:text-4xl text-cream/95 leading-relaxed mb-3">主角的光，</p>
+      <p class="font-serif-cn text-3xl md:text-4xl text-cream/95 leading-relaxed mb-8">从一抹釉光开始。</p>
+      <p class="font-display italic text-base md:text-xl text-glaze-500 tracking-wider">THE GLOSS OF THE MAIN CHARACTER.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- ░░░ 05 · MANIFESTO ░░░ -->
+<!-- ════════════════════════════════════════ -->
+<section id="manifesto" class="section relative bg-cream text-ink flex items-center">
+  <div class="max-w-4xl mx-auto text-center">
+    <div class="text-xs tracking-[0.6em] uppercase text-glaze-600 mb-12">Chapter 05 · Brand Manifesto</div>
+
+    <div class="font-serif-cn text-3xl md:text-5xl leading-[1.5] tracking-wide font-light mb-8">
+      <p class="mb-3">她不是配角的发，</p>
+      <p class="mb-12 rose-gold-text font-semibold">是主角的光。</p>
+      <p class="mb-3">她不借光，</p>
+      <p class="mb-12 rose-gold-text font-semibold">她自己亮。</p>
+      <p class="mb-3">这世界给不出的高光，</p>
+      <p class="mb-12 rose-gold-text font-semibold">她从一抹釉光开始。</p>
+      <p class="text-2xl md:text-3xl text-ink/80">卡诗，给主角的光。</p>
+    </div>
+
+    <div class="h-px w-24 bg-glaze-500/40 mx-auto my-12"></div>
+
+    <div class="font-display italic text-base md:text-lg leading-relaxed text-ink/60">
+      <p class="mb-2">She's not the supporting role's hair.</p>
+      <p class="mb-6 italic font-semibold">She's the gloss of the main character.</p>
+      <p class="mb-2">She doesn't borrow her shine.</p>
+      <p class="mb-6 italic font-semibold">She is her own.</p>
+      <p>Kérastase. The gloss of the main character.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- ░░░ 06 · TA · 4 ARCHETYPES ░░░ -->
+<!-- ════════════════════════════════════════ -->
+<section id="ta" class="section grain relative">
+  <div class="max-w-[1500px] mx-auto">
+    <div class="text-xs tracking-[0.6em] uppercase text-glaze-500 mb-4">Chapter 06 · TA Archetype</div>
+    <h2 class="font-display text-5xl md:text-7xl mb-2 leading-[0.95]">Glossy Girls 升维：</h2>
+    <h2 class="font-display italic text-5xl md:text-7xl mb-12 leading-[0.95] rose-gold-text">从野玫瑰到主角。</h2>
+
+    <div class="grid md:grid-cols-2 gap-12 mb-16 max-w-5xl">
+      <div>
+        <div class="text-glaze-500 text-xs tracking-widest mb-3">原 TA Profile · WAVE 1</div>
+        <div class="space-y-2 text-cream/70">
+          <div class="border-b border-cream/10 pb-2">顺心而活的野玫瑰</div>
+          <div class="border-b border-cream/10 pb-2">自由发光</div>
+          <div class="border-b border-cream/10 pb-2">自我认同</div>
+          <div class="border-b border-cream/10 pb-2">闺蜜陪伴</div>
+        </div>
+      </div>
+      <div>
+        <div class="text-glaze-500 text-xs tracking-widest mb-3">升级 TA Profile · WAVE 2</div>
+        <div class="space-y-2 font-semibold">
+          <div class="border-b border-glaze-500/30 pb-2 rose-gold-text">自带光环的女主角</div>
+          <div class="border-b border-glaze-500/30 pb-2 rose-gold-text">主角发光</div>
+          <div class="border-b border-glaze-500/30 pb-2 rose-gold-text">主体性 + 主角光环</div>
+          <div class="border-b border-glaze-500/30 pb-2 rose-gold-text">双女主同框 / 女 1 + 女 1.5</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 Slices -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="card border border-glaze-500/30 rounded-2xl overflow-hidden bg-cream/5">
+        <div class="img-reveal aspect-square bg-glaze-500/10">
+          <img src="../images/ta01-mainchar-self.png" alt="独白时刻" class="w-full h-full object-cover" loading="lazy" onerror="this.style.opacity=0">
+        </div>
+        <div class="p-5">
+          <div class="text-glaze-500 text-xs tracking-widest mb-1">SLICE 01</div>
+          <div class="font-serif-cn text-xl mb-2">独白时刻</div>
+          <div class="text-cream/60 text-xs italic">"上场前，先和自己谈谈。"</div>
+          <div class="text-cream/40 text-xs mt-2">浴室 / 卧室 / 化妆台</div>
+        </div>
+      </div>
+      <div class="card border border-glaze-500/30 rounded-2xl overflow-hidden bg-cream/5">
+        <div class="img-reveal aspect-square bg-glaze-500/10">
+          <img src="../images/ta02-mainchar-bestie.png" alt="共演时刻" class="w-full h-full object-cover" loading="lazy" onerror="this.style.opacity=0">
+        </div>
+        <div class="p-5">
+          <div class="text-glaze-500 text-xs tracking-widest mb-1">SLICE 02</div>
+          <div class="font-serif-cn text-xl mb-2">共演时刻</div>
+          <div class="text-cream/60 text-xs italic">"我们俩是双女主，我也是你的女配。"</div>
+          <div class="text-cream/40 text-xs mt-2">出租车 / 电梯 / 闺蜜门口</div>
+        </div>
+      </div>
+      <div class="card border border-glaze-500/30 rounded-2xl overflow-hidden bg-cream/5">
+        <div class="img-reveal aspect-square bg-glaze-500/10">
+          <img src="../images/ta03-mainchar-commute.png" alt="通勤时刻" class="w-full h-full object-cover" loading="lazy" onerror="this.style.opacity=0">
+        </div>
+        <div class="p-5">
+          <div class="text-glaze-500 text-xs tracking-widest mb-1">SLICE 03</div>
+          <div class="font-serif-cn text-xl mb-2">通勤时刻</div>
+          <div class="text-cream/60 text-xs italic">"今日剧本：上 9 点的班，演 9 点的戏。"</div>
+          <div class="text-cream/40 text-xs mt-2">地铁 / 写字楼 / 咖啡店</div>
+        </div>
+      </div>
+      <div class="card border border-glaze-500/30 rounded-2xl overflow-hidden bg-cream/5">
+        <div class="img-reveal aspect-square bg-glaze-500/10">
+          <img src="../images/ta04-mainchar-party.png" alt="派对时刻" class="w-full h-full object-cover" loading="lazy" onerror="this.style.opacity=0">
+        </div>
+        <div class="p-5">
+          <div class="text-glaze-500 text-xs tracking-widest mb-1">SLICE 04</div>
+          <div class="font-serif-cn text-xl mb-2">派对时刻</div>
+          <div class="text-cream/60 text-xs italic">"导演，我是这场戏的女主。"</div>
+          <div class="text-cream/40 text-xs mt-2">Live House / 酒吧 / 户外</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- ░░░ 07 · WAVE 1 · 开机仪式 ░░░ -->
+<!-- ════════════════════════════════════════ -->
+<section id="wave1" class="section relative bg-cream text-ink overflow-hidden">
+  <div class="max-w-[1500px] mx-auto">
+    <div class="text-xs tracking-[0.6em] uppercase text-glaze-600 mb-4">Chapter 07 · WAVE 1 · JUL 2026</div>
+    <div class="text-glaze-700 text-sm tracking-widest mb-2">第 1 集</div>
+    <h2 class="font-display text-5xl md:text-7xl mb-2 leading-[0.95]">主角光环·</h2>
+    <h2 class="font-display italic text-5xl md:text-7xl mb-12 leading-[0.95] rose-gold-text">开机仪式。</h2>
+
+    <div class="grid md:grid-cols-12 gap-12 mb-16 items-center">
+      <div class="md:col-span-7">
+        <div class="img-reveal rounded-3xl overflow-hidden aspect-[3/2] bg-glaze-500/10">
+          <img src="../images/kv02-wave1-opening-scene.png" alt="Wave 1 KV" class="w-full h-full object-cover" onerror="this.style.opacity=0">
+        </div>
+      </div>
+      <div class="md:col-span-5">
+        <div class="text-glaze-700 text-xs tracking-widest mb-3">TAGLINE</div>
+        <div class="font-display italic text-3xl md:text-5xl mb-6 leading-tight rose-gold-text">主角光环，<br>从奶皮子开始。</div>
+        <div class="font-display italic text-base text-ink/60 mb-6">MAIN CHARACTER AURA · LOADING.</div>
+        <div class="text-ink/70 font-serif-cn leading-relaxed">
+          每个主角上场前都要"开机"——<br>
+          卡诗 GLOSS 发膜，是你每周 1-2 次的"开机仪式"。<br>
+          奶皮子奶霜的怀抱里，给你的发丝、和明天的自己，蓄好光。
+        </div>
+      </div>
+    </div>
+
+    <!-- KEY CLAIM CARD -->
+    <div class="border border-glaze-500/30 rounded-3xl p-8 md:p-12 mb-16 bg-gradient-to-br from-glaze-500/5 to-transparent">
+      <div class="text-glaze-700 text-xs tracking-[0.5em] mb-4">KEY CLAIM · 功能向 + 数字</div>
+      <div class="font-display text-3xl md:text-5xl mb-4 leading-tight">「奶皮子润进发，<br>4 天弹润抗躁。」</div>
+      <div class="font-display italic text-ink/50 mb-8">4 DAYS ANTI-FRIZZ · BOUNCY GLOSSY HAIR</div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-glaze-500/10 rounded-2xl p-5 text-center">
+          <div class="num-display text-5xl rose-gold-text mb-1">4<span class="text-xl">天</span></div>
+          <div class="text-xs text-ink/60 tracking-widest">持续抗躁</div>
+        </div>
+        <div class="bg-glaze-500/10 rounded-2xl p-5 text-center">
+          <div class="num-display text-5xl rose-gold-text mb-1">65<span class="text-xl">%</span></div>
+          <div class="text-xs text-ink/60 tracking-widest">即刻顺滑</div>
+        </div>
+        <div class="bg-glaze-500/10 rounded-2xl p-5 text-center">
+          <div class="num-display text-5xl rose-gold-text mb-1">88<span class="text-xl">%</span></div>
+          <div class="text-xs text-ink/60 tracking-widest">即刻保湿</div>
+        </div>
+        <div class="bg-glaze-500/10 rounded-2xl p-5 text-center">
+          <div class="num-display text-5xl rose-gold-text mb-1">33<span class="text-xl">%</span></div>
+          <div class="text-xs text-ink/60 tracking-widest">即刻减毛躁</div>
+        </div>
+      </div>
+      <div class="text-xs text-ink/40 mt-4 italic">数据来源：BRIEF Slide 32 全球 Consumer Test + Instrumental Test</div>
+    </div>
+
+    <!-- 5 NICKNAMES -->
+    <div class="mb-16">
+      <div class="text-glaze-700 text-xs tracking-[0.5em] mb-3">5 个昵称提案 · 每个昵称都附数据/逻辑</div>
+      <h3 class="font-display text-3xl md:text-5xl mb-8 leading-tight">"奶皮子" 是怎么<br>"打"出来的？</h3>
+
+      <div class="grid md:grid-cols-5 gap-4">
+        <div class="card border-2 border-glaze-500 rounded-2xl overflow-hidden bg-glaze-500/10 relative">
+          <div class="absolute top-3 right-3 z-10">
+            <div class="bg-glaze-500 text-cream text-[10px] tracking-widest px-2 py-1 rounded-full">⭐ FIRST PICK</div>
+          </div>
+          <div class="aspect-square bg-glaze-500/20"><img src="../images/nn01-mask-yulight-naipi.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+          <div class="p-4">
+            <div class="font-serif-cn text-xl font-bold mb-2">釉光奶皮子</div>
+            <div class="text-ink/60 text-xs leading-relaxed">客户内部已用 · 小红书"奶皮子"12万贴自带流量 · 最 GenZ</div>
+          </div>
+        </div>
+
+        <div class="card border border-glaze-500/30 rounded-2xl overflow-hidden bg-cream">
+          <div class="aspect-square bg-glaze-500/10"><img src="../images/nn02-mask-cream-rose-jar.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+          <div class="p-4">
+            <div class="font-serif-cn text-xl mb-2">奶霜玫瑰罐</div>
+            <div class="text-ink/60 text-xs leading-relaxed">突出质地+成分 · 与"小粉珠"系列结构对位</div>
+          </div>
+        </div>
+
+        <div class="card border border-glaze-500/30 rounded-2xl overflow-hidden bg-cream">
+          <div class="aspect-square bg-glaze-500/10"><img src="../images/nn03-mask-sweet-care-jar.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+          <div class="p-4">
+            <div class="font-serif-cn text-xl mb-2">甜养小奶罐</div>
+            <div class="text-ink/60 text-xs leading-relaxed">情绪体验 · 呼应"开机仪式" ritual 感</div>
+          </div>
+        </div>
+
+        <div class="card border border-glaze-500/30 rounded-2xl overflow-hidden bg-cream">
+          <div class="aspect-square bg-glaze-500/10"><img src="../images/nn04-mask-pink-cream.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+          <div class="p-4">
+            <div class="font-serif-cn text-xl mb-2">粉奶霜</div>
+            <div class="text-ink/60 text-xs leading-relaxed">极简记忆 · 语速最快可传播</div>
+          </div>
+        </div>
+
+        <div class="card border border-glaze-500/30 rounded-2xl overflow-hidden bg-cream">
+          <div class="aspect-square bg-glaze-500/10"><img src="../images/nn05-mask-honey-glaze.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+          <div class="p-4">
+            <div class="font-serif-cn text-xl mb-2">釉光蜜糖膜</div>
+            <div class="text-ink/60 text-xs leading-relaxed">联动卡诗"晚安蜜"既有传播资产</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 STORIES -->
+    <div class="mb-16">
+      <div class="text-glaze-700 text-xs tracking-[0.5em] mb-3">4 个故事系统</div>
+      <h3 class="font-display text-3xl md:text-5xl mb-8 leading-tight">从成分到质地，<br>每一层都和"开机"<span class="rose-gold-text">扣回主轴</span>。</h3>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-glaze-500/5 border border-glaze-500/20 rounded-2xl p-6">
+          <div class="text-glaze-700 text-xs tracking-widest mb-3">STORY 01 · INGREDIENT</div>
+          <div class="font-serif-cn text-2xl mb-3 font-semibold">复合柔酸 + 9年火山野玫瑰 + 玻尿酸</div>
+          <div class="text-ink/70 text-sm leading-relaxed font-serif-cn">
+            法国奥弗涅火山区的野玫瑰精粹，喝过火山土的矿物质，也淋过晨曦最早一束光。9 年精研，48 小时低温有机萃取，每一滴都是发丝的"喝饱玫瑰露"。
+          </div>
+        </div>
+
+        <div class="bg-glaze-500/5 border border-glaze-500/20 rounded-2xl p-6">
+          <div class="text-glaze-700 text-xs tracking-widest mb-3">STORY 02 · TECHNOLOGY</div>
+          <div class="font-serif-cn text-2xl mb-3 font-semibold">Fusionic Technology 仿生定向修护</div>
+          <div class="text-ink/70 text-sm leading-relaxed font-serif-cn">
+            借鉴皮肤科学的"分子定向充电"科技——阳离子分子精准对位发丝负电荷，形成超薄但完整的修护膜。这是为什么奶皮子虽然奶霜质地，却能像水一样透。
+          </div>
+        </div>
+
+        <div class="bg-glaze-500/5 border border-glaze-500/20 rounded-2xl p-6">
+          <div class="text-glaze-700 text-xs tracking-widest mb-3">STORY 03 · FRAGRANCE UPGRADE</div>
+          <div class="font-serif-cn text-2xl mb-3 font-semibold">釉光花境 · 蜜调升级版</div>
+          <div class="text-ink/70 text-sm leading-relaxed font-serif-cn mb-3">
+            <strong>关键升级：中调加入"奶白玫瑰"</strong>——奶皮子 + 玫瑰，呼应产品质地，柔化 Wave 1 "玫瑰太冲" 舆情。
+          </div>
+          <div class="text-xs space-y-1 text-ink/60">
+            <div>前调：佛手柑 + 柠檬 + 小豆蔻 → <em>清晨开机</em></div>
+            <div>中调：奶白玫瑰 + 鸢尾 + 茉莉 → <em>主角入场</em></div>
+            <div>尾调：檀木 + 香草 + 白麝香 → <em>主角光环余韵</em></div>
+          </div>
+        </div>
+
+        <div class="bg-glaze-500/5 border border-glaze-500/20 rounded-2xl p-6">
+          <div class="text-glaze-700 text-xs tracking-widest mb-3">STORY 04 · TEXTURE</div>
+          <div class="font-serif-cn text-2xl mb-3 font-semibold">奶皮子 · 奶霜中的释光师</div>
+          <div class="text-ink/70 text-sm leading-relaxed font-serif-cn">
+            你有没有撕开过一层奶皮子？那是奶霜表面凝出的最薄、最光、最甜的一层。釉光奶皮子发膜，质地就是这一层——触碰即融，融化进发丝的瞬间，就像把一块提拉米苏奶油，敷在了发丝上。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT IMAGES -->
+    <div class="grid md:grid-cols-2 gap-6 mb-12">
+      <div class="img-reveal rounded-3xl overflow-hidden aspect-square bg-glaze-500/10">
+        <img src="../images/prd01-mask-product.png" class="w-full h-full object-cover" onerror="this.style.opacity=0">
+      </div>
+      <div class="img-reveal rounded-3xl overflow-hidden aspect-square bg-glaze-500/10">
+        <img src="../images/prd02-mask-texture-macro.png" class="w-full h-full object-cover" onerror="this.style.opacity=0">
+      </div>
+    </div>
+
+    <!-- GLAZE DROP REPUSH -->
+    <div class="grid md:grid-cols-12 gap-8 items-center bg-glaze-500/5 rounded-3xl p-8 border border-glaze-500/20">
+      <div class="md:col-span-4">
+        <div class="img-reveal rounded-2xl overflow-hidden aspect-square bg-glaze-500/10">
+          <img src="../images/prd05-glaze-drop-glow.png" class="w-full h-full object-cover" onerror="this.style.opacity=0">
+        </div>
+      </div>
+      <div class="md:col-span-8">
+        <div class="text-glaze-700 text-xs tracking-widest mb-3">小粉珠 REPUSH</div>
+        <div class="font-display text-2xl md:text-4xl mb-4">主角的随身补光糖。</div>
+        <div class="font-display italic text-ink/60 mb-4">Glow Drop on-the-go.</div>
+        <div class="text-ink/70 font-serif-cn leading-relaxed">
+          小粉珠从"护发精油"重新定位为「主角的随身补光糖」。<br>
+          出门前最后 1 滴，是主角的最后一道高光。
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- ░░░ 08 · WAVE 2 · 双女主同框 ░░░ -->
+<!-- ════════════════════════════════════════ -->
+<section id="wave2" class="section grain relative overflow-hidden">
+  <div class="bloom bloom-3 absolute top-40 left-20"></div>
+  <div class="bloom bloom-2 absolute bottom-40 right-20"></div>
+
+  <div class="max-w-[1500px] mx-auto relative z-10">
+    <div class="text-xs tracking-[0.6em] uppercase text-glaze-500 mb-4">Chapter 08 · WAVE 2 · AUG 2026</div>
+    <div class="text-glaze-500 text-sm tracking-widest mb-2">第 2 集</div>
+    <h2 class="font-display text-5xl md:text-7xl mb-2 leading-[0.95]">主角光环·</h2>
+    <h2 class="font-display italic text-5xl md:text-7xl mb-12 leading-[0.95] rose-gold-text">双女主同框。</h2>
+
+    <div class="grid md:grid-cols-12 gap-12 mb-16 items-center">
+      <div class="md:col-span-5">
+        <div class="text-glaze-500 text-xs tracking-widest mb-3">TAGLINE · 态度向 · 无数字</div>
+        <div class="font-display italic text-3xl md:text-5xl mb-6 leading-tight rose-gold-text">1 抹釉光，<br>闺蜜相见。</div>
+        <div class="font-display italic text-sm text-cream/60 mb-6">A FLICK OF GLOSS. TWO LEADS. ONE CINEMATIC HOUR.</div>
+        <div class="text-cream/70 font-serif-cn leading-relaxed">
+          女主角永远不是一个人发光——<br>
+          她有她的"女 1.5 号"。<br>
+          和闺蜜出门那一秒，2 抹釉光小香雾，<br>
+          你们俩共享一组镜头。
+        </div>
+      </div>
+      <div class="md:col-span-7">
+        <div class="img-reveal rounded-3xl overflow-hidden aspect-[3/2] bg-glaze-500/10">
+          <img src="../images/kv03-wave2-co-stars.png" alt="Wave 2 KV" class="w-full h-full object-cover" onerror="this.style.opacity=0">
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 NICKNAMES -->
+    <div class="mb-16">
+      <div class="text-glaze-500 text-xs tracking-[0.5em] mb-3">5 个昵称提案</div>
+      <h3 class="font-display text-3xl md:text-5xl mb-8 leading-tight">"小香雾" 怎么<br>构成 <span class="rose-gold-text">小粉珠 + 小奶罐 + 小香雾 trio？</span></h3>
+
+      <div class="grid md:grid-cols-5 gap-4">
+        <div class="card border-2 border-glaze-500 rounded-2xl overflow-hidden bg-glaze-500/10 relative">
+          <div class="absolute top-3 right-3 z-10">
+            <div class="bg-glaze-500 text-ink text-[10px] tracking-widest px-2 py-1 rounded-full font-bold">⭐ FIRST PICK</div>
+          </div>
+          <div class="aspect-square bg-glaze-500/20"><img src="../images/nn06-mist-yulight-mist.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+          <div class="p-4">
+            <div class="font-serif-cn text-xl font-bold mb-2 text-cream">釉光小香雾</div>
+            <div class="text-cream/60 text-xs leading-relaxed">沿用"小粉珠"结构 · 认知零成本 · 系列感最强</div>
+          </div>
+        </div>
+
+        <div class="card border border-glaze-500/30 rounded-2xl overflow-hidden bg-cream/5">
+          <div class="aspect-square bg-glaze-500/10"><img src="../images/nn07-mist-bestie-pair.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+          <div class="p-4">
+            <div class="font-serif-cn text-xl mb-2 text-cream">闺蜜香水雾</div>
+            <div class="text-cream/60 text-xs leading-relaxed">直击"双女主一起喷"使用场景</div>
+          </div>
+        </div>
+
+        <div class="card border border-glaze-500/30 rounded-2xl overflow-hidden bg-cream/5">
+          <div class="aspect-square bg-glaze-500/10"><img src="../images/nn08-mist-co-stars.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+          <div class="p-4">
+            <div class="font-serif-cn text-xl mb-2 text-cream">女主同框雾</div>
+            <div class="text-cream/60 text-xs leading-relaxed">强绑定 Big Idea</div>
+          </div>
+        </div>
+
+        <div class="card border border-glaze-500/30 rounded-2xl overflow-hidden bg-cream/5">
+          <div class="aspect-square bg-glaze-500/10"><img src="../images/nn09-mist-morning-rose.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+          <div class="p-4">
+            <div class="font-serif-cn text-xl mb-2 text-cream">晨光雾玫瑰</div>
+            <div class="text-cream/60 text-xs leading-relaxed">浪漫诗意 · 对标香水叙事</div>
+          </div>
+        </div>
+
+        <div class="card border border-glaze-500/30 rounded-2xl overflow-hidden bg-cream/5">
+          <div class="aspect-square bg-glaze-500/10"><img src="../images/nn10-mist-spray-flick.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+          <div class="p-4">
+            <div class="font-serif-cn text-xl mb-2 text-cream">釉光小香喷</div>
+            <div class="text-cream/60 text-xs leading-relaxed">"喷"字直白告知用法</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FRAGRANCE STORY -->
+    <div class="mb-16 bg-glaze-500/5 border border-glaze-500/20 rounded-3xl p-8 md:p-12">
+      <div class="text-glaze-500 text-xs tracking-widest mb-3">SCENT NARRATIVE · ROLLING C FRESH</div>
+      <h3 class="font-display text-3xl md:text-4xl mb-6">主角同框香</h3>
+      <p class="text-cream/70 font-serif-cn leading-relaxed mb-8 max-w-3xl">
+        卡诗首支护发香水，由 <span class="rose-gold-text font-semibold">Loïc Bisceglie & Fabrice Pellegrin</span> 双调香大师调制。<span class="rose-gold-text font-semibold">Mood Lifting Technology by Firmenich</span> 提升自信激素——经脑波测试证实。
+      </p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="border border-glaze-500/30 rounded-2xl p-5">
+          <div class="text-glaze-500 text-[10px] tracking-[0.4em] mb-2">TOP NOTES</div>
+          <div class="font-serif-cn text-lg mb-2 text-cream">前调 · 主角入场</div>
+          <div class="text-cream/60 text-sm">Italian Citrus · 佛手柑 · 小豆蔻</div>
+          <div class="text-cream/40 text-xs mt-2 italic">— 明亮一瞬，眼前一亮 —</div>
+        </div>
+        <div class="border border-glaze-500/30 rounded-2xl p-5">
+          <div class="text-glaze-500 text-[10px] tracking-[0.4em] mb-2">HEART NOTES</div>
+          <div class="font-serif-cn text-lg mb-2 text-cream">中调 · 主体绽放</div>
+          <div class="text-cream/60 text-sm">Rose · Iris · Jasmin · Freesia</div>
+          <div class="text-cream/40 text-xs mt-2 italic">— 玫瑰花园的柔软高光 —</div>
+        </div>
+        <div class="border border-glaze-500/30 rounded-2xl p-5">
+          <div class="text-glaze-500 text-[10px] tracking-[0.4em] mb-2">BASE NOTES</div>
+          <div class="font-serif-cn text-lg mb-2 text-cream">尾调 · 余韵不散</div>
+          <div class="text-cream/60 text-sm">Sandal · Vanilla · Amber</div>
+          <div class="text-cream/40 text-xs mt-2 italic">— 主角光环不下线 —</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT IMAGES -->
+    <div class="grid md:grid-cols-2 gap-6 mb-16">
+      <div class="img-reveal rounded-3xl overflow-hidden aspect-square bg-glaze-500/10">
+        <img src="../images/prd03-mist-product.png" class="w-full h-full object-cover" onerror="this.style.opacity=0">
+      </div>
+      <div class="img-reveal rounded-3xl overflow-hidden aspect-square bg-glaze-500/10">
+        <img src="../images/prd04-mist-spray-moment.png" class="w-full h-full object-cover" onerror="this.style.opacity=0">
+      </div>
+    </div>
+
+    <!-- 6 LIFESTYLE MOMENTS -->
+    <div class="mb-8">
+      <div class="text-glaze-500 text-xs tracking-[0.5em] mb-3">LIFESTYLE · 6 个使用时刻</div>
+      <h3 class="font-display text-3xl md:text-5xl mb-8 leading-tight">每一抹，<br>都是<span class="rose-gold-text">一段电影。</span></h3>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="border border-glaze-500/30 rounded-2xl p-5 bg-cream/5">
+          <div class="font-display text-3xl rose-gold-text mb-2">①</div>
+          <div class="font-serif-cn text-lg mb-2 text-cream">出门前最后 1 秒</div>
+          <div class="text-cream/50 text-xs italic">"今日，全场都是我的镜头。"</div>
+        </div>
+        <div class="border border-glaze-500/30 rounded-2xl p-5 bg-cream/5">
+          <div class="font-display text-3xl rose-gold-text mb-2">②</div>
+          <div class="font-serif-cn text-lg mb-2 text-cream">闺蜜一起出门</div>
+          <div class="text-cream/50 text-xs italic">"我们是双女主，互喷一抹。"</div>
+        </div>
+        <div class="border border-glaze-500/30 rounded-2xl p-5 bg-cream/5">
+          <div class="font-display text-3xl rose-gold-text mb-2">③</div>
+          <div class="font-serif-cn text-lg mb-2 text-cream">派对前的能量加持</div>
+          <div class="text-cream/50 text-xs italic">"不用借光，我自己开机。"</div>
+        </div>
+        <div class="border border-glaze-500/30 rounded-2xl p-5 bg-cream/5">
+          <div class="font-display text-3xl rose-gold-text mb-2">④</div>
+          <div class="font-serif-cn text-lg mb-2 text-cream">通勤地铁里</div>
+          <div class="text-cream/50 text-xs italic">"5 分钟变身，3 节地铁的距离。"</div>
+        </div>
+        <div class="border border-glaze-500/30 rounded-2xl p-5 bg-cream/5">
+          <div class="font-display text-3xl rose-gold-text mb-2">⑤</div>
+          <div class="font-serif-cn text-lg mb-2 text-cream">闺蜜的礼物</div>
+          <div class="text-cream/50 text-xs italic">"代我，闪耀。"</div>
+        </div>
+        <div class="border border-glaze-500/30 rounded-2xl p-5 bg-cream/5">
+          <div class="font-display text-3xl rose-gold-text mb-2">⑥</div>
+          <div class="font-serif-cn text-lg mb-2 text-cream">居家自我犒赏</div>
+          <div class="text-cream/50 text-xs italic">"一抹给自己的高光。"</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- ░░░ 09 · BESTIE GIFTING · 共光胶囊 ░░░ -->
+<!-- ════════════════════════════════════════ -->
+<section id="bestie" class="section relative bg-cream text-ink">
+  <div class="max-w-[1500px] mx-auto">
+    <div class="text-xs tracking-[0.6em] uppercase text-glaze-600 mb-4">Chapter 09 · Bestie Gifting</div>
+    <h2 class="font-display text-5xl md:text-7xl mb-2 leading-[0.95]">共光胶囊 ✦</h2>
+    <h2 class="font-display italic text-5xl md:text-7xl mb-12 leading-[0.95] rose-gold-text">CO-STAR KIT.</h2>
+
+    <p class="font-serif-cn max-w-3xl text-lg md:text-xl mb-16 text-ink/70 leading-relaxed">
+      4 Tier 礼盒延续客户已锁定的"银色 / 圆形 / 类似耳包"形态，
+      但全新命名系统紧扣<span class="text-glaze-700 font-semibold">主角光环</span>——
+      每个 Tier 都是一个剧情阶段。
+    </p>
+
+    <!-- 4 TIERS -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+      <div class="card border border-glaze-500/30 rounded-3xl p-6 bg-gradient-to-b from-glaze-500/5 to-transparent">
+        <div class="aspect-[4/3] bg-glaze-500/10 rounded-2xl mb-4 overflow-hidden img-reveal">
+          <img src="../images/bes01-girl-opening-box.png" class="w-full h-full object-cover" onerror="this.style.opacity=0">
+        </div>
+        <div class="text-glaze-700 text-xs tracking-widest mb-2">TIER 1 · 入门</div>
+        <div class="font-serif-cn text-2xl font-semibold mb-2">女主开机礼</div>
+        <div class="text-ink/60 text-sm mb-3">发膜（200ml）+ 小粉珠（45ml）</div>
+        <div class="font-display text-2xl rose-gold-text mb-1">¥630</div>
+        <div class="text-ink/40 text-xs">电商 · 自购入门</div>
+      </div>
+
+      <div class="card border border-glaze-500/30 rounded-3xl p-6 bg-gradient-to-b from-glaze-500/5 to-transparent">
+        <div class="aspect-[4/3] bg-glaze-500/10 rounded-2xl mb-4 overflow-hidden img-reveal">
+          <img src="../images/prd06-bestie-box-4tier.png" class="w-full h-full object-cover object-left" onerror="this.style.opacity=0">
+        </div>
+        <div class="text-glaze-700 text-xs tracking-widest mb-2">TIER 2 · 闺蜜礼赠</div>
+        <div class="font-serif-cn text-2xl font-semibold mb-2">双主联演礼</div>
+        <div class="text-ink/60 text-sm mb-3">+ 釉光小香雾（30ml）</div>
+        <div class="font-display text-2xl rose-gold-text mb-1">¥990</div>
+        <div class="text-ink/40 text-xs">电商 · 闺蜜送礼 / 自用升级</div>
+      </div>
+
+      <div class="card border-2 border-glaze-500 rounded-3xl p-6 bg-gradient-to-b from-glaze-500/15 to-transparent">
+        <div class="aspect-[4/3] bg-glaze-500/10 rounded-2xl mb-4 overflow-hidden img-reveal">
+          <img src="../images/prd06-bestie-box-4tier.png" class="w-full h-full object-cover" onerror="this.style.opacity=0">
+        </div>
+        <div class="text-glaze-700 text-xs tracking-widest mb-2">TIER 3 · 高奢 ⭐</div>
+        <div class="font-serif-cn text-2xl font-semibold mb-2">主角光环典藏礼</div>
+        <div class="text-ink/60 text-sm mb-3">全 4 件套 + GWP 限定盲盒</div>
+        <div class="font-display text-2xl rose-gold-text mb-1">¥1,480</div>
+        <div class="text-ink/40 text-xs">线下 · 高奢礼赠 / Bestie 共购</div>
+      </div>
+
+      <div class="card border border-ink rounded-3xl p-6 bg-ink text-cream">
+        <div class="aspect-[4/3] bg-cream/10 rounded-2xl mb-4 overflow-hidden img-reveal">
+          <img src="../images/prd06-bestie-box-4tier.png" class="w-full h-full object-cover object-right" onerror="this.style.opacity=0">
+        </div>
+        <div class="text-glaze-500 text-xs tracking-widest mb-2">TIER 4 · PR ONLY</div>
+        <div class="font-serif-cn text-2xl font-semibold mb-2">红毯定制礼</div>
+        <div class="text-cream/60 text-sm mb-3">可刻名 + Glow Time 怀表 + 徽章全套</div>
+        <div class="font-display text-2xl rose-gold-text mb-1">PR · 限</div>
+        <div class="text-cream/40 text-xs">媒体 / KOL 公关</div>
+      </div>
+    </div>
+
+    <!-- AURA BADGES -->
+    <div class="grid md:grid-cols-12 gap-8 items-center bg-glaze-500/5 rounded-3xl p-8 md:p-12 border border-glaze-500/30 mb-12">
+      <div class="md:col-span-5">
+        <div class="img-reveal rounded-2xl overflow-hidden aspect-square">
+          <img src="../images/bes02-aura-badges-set.png" class="w-full h-full object-cover" onerror="this.style.opacity=0">
+        </div>
+      </div>
+      <div class="md:col-span-7">
+        <div class="text-glaze-700 text-xs tracking-widest mb-3">GWP SYSTEM · 主角徽章 ✦ AURA BADGES</div>
+        <h3 class="font-display text-2xl md:text-4xl mb-6">每枚徽章，<br>都是一句<span class="rose-gold-text">主角台词。</span></h3>
+        <div class="grid grid-cols-2 gap-3 mb-6">
+          <div class="bg-cream border border-glaze-500/30 rounded-xl px-4 py-3">
+            <div class="font-serif-cn font-semibold">「女 1 号」</div>
+            <div class="text-ink/50 text-xs">主角光环徽章</div>
+          </div>
+          <div class="bg-cream border border-glaze-500/30 rounded-xl px-4 py-3">
+            <div class="font-serif-cn font-semibold">「今日开机」</div>
+            <div class="text-ink/50 text-xs">早八打工人</div>
+          </div>
+          <div class="bg-cream border border-glaze-500/30 rounded-xl px-4 py-3">
+            <div class="font-serif-cn font-semibold">「ON AIR」</div>
+            <div class="text-ink/50 text-xs">高光时刻在线</div>
+          </div>
+          <div class="bg-cream border border-glaze-500/30 rounded-xl px-4 py-3">
+            <div class="font-serif-cn font-semibold">「共演中」</div>
+            <div class="text-ink/50 text-xs">闺蜜 CP 同款</div>
+          </div>
+          <div class="bg-cream border border-glaze-500/30 rounded-xl px-4 py-3">
+            <div class="font-serif-cn font-semibold">「女主请就位」</div>
+            <div class="text-ink/50 text-xs">派对场景</div>
+          </div>
+          <div class="bg-cream border border-glaze-500/30 rounded-xl px-4 py-3">
+            <div class="font-serif-cn font-semibold">「别打断我的镜头」</div>
+            <div class="text-ink/50 text-xs">边界感+主体性</div>
+          </div>
+        </div>
+        <div class="text-ink/50 text-sm">附加 GWP：银色 K 锁挂件 · 釉光小熊毛绒（盲盒 4 款）· Glow Time 复古怀表（PR 限定）· 主角剧本贴纸卡</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- ░░░ 10 · IP COLLAB · THE AURA CAFÉ ░░░ -->
+<!-- ════════════════════════════════════════ -->
+<section id="cafe" class="section grain relative overflow-hidden">
+  <div class="bloom bloom-1 absolute -top-40 right-20"></div>
+  <div class="bloom bloom-2 absolute bottom-20 -left-40"></div>
+
+  <div class="max-w-[1500px] mx-auto relative z-10">
+    <div class="text-xs tracking-[0.6em] uppercase text-glaze-500 mb-4">Chapter 10 · IP Collab Pop-Up</div>
+    <h2 class="font-display text-5xl md:text-7xl mb-2 leading-[0.95]">THE AURA CAFÉ ×</h2>
+    <h2 class="font-display italic text-5xl md:text-7xl mb-12 leading-[0.95] rose-gold-text">13 de Marzo.</h2>
+
+    <p class="font-serif-cn max-w-3xl text-lg md:text-xl mb-16 text-cream/70 leading-relaxed">
+      武康-安福被 <em>Jing Daily</em> 称为 <span class="text-glaze-500">"Z 世代宇宙中心"</span>。
+      这里是上海唯一能同时实现 <strong>朝圣感 / 视觉资产 / 全球话题度</strong> 的地段。
+    </p>
+
+    <!-- HERO -->
+    <div class="img-reveal rounded-3xl overflow-hidden aspect-[3/2] mb-16 bg-glaze-500/10">
+      <img src="../images/kv04-aura-cafe-exterior.png" alt="The AURA CAFÉ" class="w-full h-full object-cover" onerror="this.style.opacity=0">
+    </div>
+
+    <!-- WHY 13 DE MARZO -->
+    <div class="mb-16">
+      <div class="text-glaze-500 text-xs tracking-[0.5em] mb-3">为什么是 13 DE MARZO · 选定逻辑</div>
+      <h3 class="font-display text-3xl md:text-5xl mb-8 leading-tight">5 维评分 · <span class="rose-gold-text">25/25 满分。</span></h3>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b border-glaze-500/30 text-glaze-500 text-xs tracking-widest">
+              <th class="py-4 pr-4">候选</th>
+              <th class="py-4 px-4 text-center">调性匹配</th>
+              <th class="py-4 px-4 text-center">武康安福</th>
+              <th class="py-4 px-4 text-center">未与高奢联名</th>
+              <th class="py-4 px-4 text-center">Prop-as-Souvenir</th>
+              <th class="py-4 px-4 text-center">国际声量</th>
+              <th class="py-4 px-4 text-center">总分</th>
+            </tr>
+          </thead>
+          <tbody class="text-cream/80 font-serif-cn">
+            <tr class="border-b border-glaze-500 bg-glaze-500/15 font-bold">
+              <td class="py-4 pr-4 text-cream">13 de Marzo ⭐</td>
+              <td class="py-4 px-4 text-center">★★★★★</td>
+              <td class="py-4 px-4 text-center">★★★★★</td>
+              <td class="py-4 px-4 text-center">★★★★★</td>
+              <td class="py-4 px-4 text-center">★★★★★</td>
+              <td class="py-4 px-4 text-center">★★★★★</td>
+              <td class="py-4 px-4 text-center text-glaze-500 text-2xl">25/25</td>
+            </tr>
+            <tr class="border-b border-glaze-500/10">
+              <td class="py-3 pr-4">米仓 POP</td>
+              <td class="py-3 px-4 text-center">★★★★</td>
+              <td class="py-3 px-4 text-center">★★★★</td>
+              <td class="py-3 px-4 text-center">★★★★</td>
+              <td class="py-3 px-4 text-center">★★★</td>
+              <td class="py-3 px-4 text-center">★★★</td>
+              <td class="py-3 px-4 text-center text-cream/50">18/25</td>
+            </tr>
+            <tr class="border-b border-glaze-500/10">
+              <td class="py-3 pr-4">EAU Cafe</td>
+              <td class="py-3 px-4 text-center">★★★★</td>
+              <td class="py-3 px-4 text-center">★★★★</td>
+              <td class="py-3 px-4 text-center">★★★★★</td>
+              <td class="py-3 px-4 text-center">★★</td>
+              <td class="py-3 px-4 text-center">★★</td>
+              <td class="py-3 px-4 text-center text-cream/50">17/25</td>
+            </tr>
+            <tr class="border-b border-glaze-500/10">
+              <td class="py-3 pr-4">喜茶 Lab</td>
+              <td class="py-3 px-4 text-center">★★★</td>
+              <td class="py-3 px-4 text-center">★★★★</td>
+              <td class="py-3 px-4 text-center">★★</td>
+              <td class="py-3 px-4 text-center">★★★★</td>
+              <td class="py-3 px-4 text-center">★★★★★</td>
+              <td class="py-3 px-4 text-center text-cream/50">18/25</td>
+            </tr>
+            <tr class="border-b border-glaze-500/10">
+              <td class="py-3 pr-4">AMAM</td>
+              <td class="py-3 px-4 text-center">★★★★</td>
+              <td class="py-3 px-4 text-center">★★★★★</td>
+              <td class="py-3 px-4 text-center">❌（已与 Valentino）</td>
+              <td class="py-3 px-4 text-center">★★★★</td>
+              <td class="py-3 px-4 text-center">★★★★</td>
+              <td class="py-3 px-4 text-center text-cream/30">17/25</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-4 text-sm">
+        <div class="border border-glaze-500/30 rounded-2xl p-5 bg-cream/5">
+          <div class="text-glaze-500 text-xs tracking-widest mb-2">RATIONALE 01</div>
+          <div class="font-serif-cn text-cream/80">小熊抱杯 = 完美的"女 1.5 号" — 主角永远需要 sidekick</div>
+        </div>
+        <div class="border border-glaze-500/30 rounded-2xl p-5 bg-cream/5">
+          <div class="text-glaze-500 text-xs tracking-widest mb-2">RATIONALE 02</div>
+          <div class="font-serif-cn text-cream/80">安福路 322 号 + 全球 GenZ 朝圣地 (KL 都有店)</div>
+        </div>
+        <div class="border border-glaze-500/30 rounded-2xl p-5 bg-cream/5">
+          <div class="text-glaze-500 text-xs tracking-widest mb-2">RATIONALE 03</div>
+          <div class="font-serif-cn text-cream/80">从未与高奢美妆联名 = 卡诗可做 "first ever"</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTERIOR -->
+    <div class="grid md:grid-cols-12 gap-8 items-center mb-16">
+      <div class="md:col-span-7">
+        <div class="img-reveal rounded-3xl overflow-hidden aspect-[3/2] bg-glaze-500/10">
+          <img src="../images/ip01-aura-cafe-interior.png" class="w-full h-full object-cover" onerror="this.style.opacity=0">
+        </div>
+      </div>
+      <div class="md:col-span-5">
+        <div class="text-glaze-500 text-xs tracking-widest mb-3">SPACE CONCEPT</div>
+        <h3 class="font-display text-3xl md:text-4xl mb-4">整店改造为<br><span class="rose-gold-text">"片场"。</span></h3>
+        <ul class="text-cream/70 font-serif-cn space-y-2 leading-relaxed">
+          <li>· 红毯入口（取代普通门厅）</li>
+          <li>· 化妆灯柱（化妆镜灯环装饰）</li>
+          <li>· "ON AIR" 灯牌（实时直播感）</li>
+          <li>· 拍立得相机区（每位顾客 1 张电影海报）</li>
+          <li>· "导演椅"等位区</li>
+          <li>· "化妆间"洗手间</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- GLOSS BEAR -->
+    <div class="grid md:grid-cols-12 gap-8 items-center mb-16">
+      <div class="md:col-span-5 order-2 md:order-1">
+        <div class="text-glaze-500 text-xs tracking-widest mb-3">SIGNATURE COLLAB MASCOT</div>
+        <h3 class="font-display text-3xl md:text-4xl mb-4">釉光小熊 ✦<br><span class="rose-gold-text">GLOSS BEAR.</span></h3>
+        <div class="text-cream/70 font-serif-cn leading-relaxed mb-4">
+          粉金色毛绒 / 抱着 mini 卡诗发膜罐 / 系着金色"女 1 号"丝带
+        </div>
+        <div class="grid grid-cols-2 gap-3 text-sm text-cream/60">
+          <div class="border border-glaze-500/30 rounded-xl p-3">
+            <div class="font-serif-cn font-semibold text-cream">女主版</div>
+            <div class="text-xs">粉金 / 抱发膜</div>
+          </div>
+          <div class="border border-glaze-500/30 rounded-xl p-3">
+            <div class="font-serif-cn font-semibold text-cream">双女主版</div>
+            <div class="text-xs">两只小熊牵手</div>
+          </div>
+          <div class="border border-glaze-500/30 rounded-xl p-3">
+            <div class="font-serif-cn font-semibold text-cream">导演版</div>
+            <div class="text-xs">手拿场记板</div>
+          </div>
+          <div class="border border-glaze-500/30 rounded-xl p-3">
+            <div class="font-serif-cn font-semibold text-cream">红毯版</div>
+            <div class="text-xs">穿礼服款</div>
+          </div>
+        </div>
+        <div class="text-glaze-500 text-xs mt-4">→ 4 款盲盒 · 全球 GenZ 必抢的二次创作素材</div>
+      </div>
+      <div class="md:col-span-7 order-1 md:order-2">
+        <div class="img-reveal rounded-3xl overflow-hidden aspect-square bg-glaze-500/10">
+          <img src="../images/ip02-gloss-bear-mascot.png" class="w-full h-full object-cover" onerror="this.style.opacity=0">
+        </div>
+      </div>
+    </div>
+
+    <!-- DESSERTS -->
+    <div class="mb-16">
+      <div class="text-glaze-500 text-xs tracking-[0.5em] mb-3">3 联名甜品 · 产品形 → 食物形</div>
+      <h3 class="font-display text-3xl md:text-5xl mb-8 leading-tight">每一道甜品，<br>都<span class="rose-gold-text">复刻一款产品。</span></h3>
+
+      <div class="img-reveal rounded-3xl overflow-hidden mb-8 aspect-[3/2] bg-glaze-500/10">
+        <img src="../images/ip03-collab-desserts.png" class="w-full h-full object-cover" onerror="this.style.opacity=0">
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="border border-glaze-500/30 rounded-2xl p-5 bg-cream/5">
+          <div class="text-glaze-500 text-xs tracking-widest mb-2">FOR · 釉光奶皮子发膜</div>
+          <div class="font-serif-cn text-2xl mb-2 text-cream">「奶皮子千层 · 第 1 集」</div>
+          <div class="text-cream/60 text-sm">玫瑰奶霜千层 + 焦糖奶皮顶层 → 复刻发膜质地</div>
+        </div>
+        <div class="border border-glaze-500/30 rounded-2xl p-5 bg-cream/5">
+          <div class="text-glaze-500 text-xs tracking-widest mb-2">FOR · 釉光小香雾</div>
+          <div class="font-serif-cn text-2xl mb-2 text-cream">「玫瑰釉光拿铁 · 间奏曲」</div>
+          <div class="text-cream/60 text-sm">玫瑰糖浆 + 奶白拿铁 → 复刻香水前调</div>
+        </div>
+        <div class="border border-glaze-500/30 rounded-2xl p-5 bg-cream/5">
+          <div class="text-glaze-500 text-xs tracking-widest mb-2">FOR · 小粉珠</div>
+          <div class="font-serif-cn text-2xl mb-2 text-cream">「高光糖浆 Gelato · 片尾曲」</div>
+          <div class="text-cream/60 text-sm">玫瑰荔枝雪芭 + 金箔淋面 → 复刻精油</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAKE-AWAY SOUVENIRS -->
+    <div class="grid md:grid-cols-12 gap-8 items-center mb-16">
+      <div class="md:col-span-7">
+        <div class="img-reveal rounded-3xl overflow-hidden aspect-square bg-glaze-500/10">
+          <img src="../images/ip04-takeaway-souvenirs.png" class="w-full h-full object-cover" onerror="this.style.opacity=0">
+        </div>
+      </div>
+      <div class="md:col-span-5">
+        <div class="text-glaze-500 text-xs tracking-widest mb-3">PROP-AS-SOUVENIR · 必能拍 / 必能带走</div>
+        <h3 class="font-display text-3xl md:text-4xl mb-6">每位主角，<br><span class="rose-gold-text">都领走一个剧本。</span></h3>
+        <ul class="text-cream/70 font-serif-cn space-y-3 leading-relaxed">
+          <li>📜 <strong>「今日剧本卡 · Today's Script」</strong>—— 印一句"主角今日台词"</li>
+          <li>🧸 <strong>釉光小熊 mini 盲盒</strong>—— 消费满 88 元</li>
+          <li>🎖 <strong>主角徽章贴纸 1 张</strong>—— 4 款随机</li>
+          <li>☕ <strong>限定杯套</strong>—— "主角光环 / MAIN CHARACTER AURA" 双语</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 5 THEMED DAYS -->
+    <div>
+      <div class="text-glaze-500 text-xs tracking-[0.5em] mb-3">5 大主题日 · 沿用 Wave 1 成功资产 + 升级</div>
+      <h3 class="font-display text-3xl md:text-5xl mb-8 leading-tight">每一天<br><span class="rose-gold-text">都是一场首映。</span></h3>
+
+      <div class="grid md:grid-cols-5 gap-4">
+        <div class="card border border-glaze-500/30 rounded-2xl p-5 bg-gradient-to-b from-glaze-500/10 to-transparent">
+          <div class="font-display italic text-3xl text-glaze-500 mb-3">DAY 1</div>
+          <div class="text-glaze-500 text-xs tracking-widest mb-2">OPENING SCENE</div>
+          <div class="font-serif-cn text-xl mb-2 text-cream">开机日</div>
+          <div class="text-cream/50 text-xs leading-relaxed">杨幂出席 · 媒体首映 · "开机仪式"现场</div>
+        </div>
+        <div class="card border border-glaze-500/30 rounded-2xl p-5 bg-gradient-to-b from-glaze-500/10 to-transparent">
+          <div class="font-display italic text-3xl text-glaze-500 mb-3">DAY 2</div>
+          <div class="text-glaze-500 text-xs tracking-widest mb-2">DRAMA SCHOOL</div>
+          <div class="font-serif-cn text-xl mb-2 text-cream">演技课</div>
+          <div class="text-cream/50 text-xs leading-relaxed">卡诗造型师 1V1 · 高光课 · 发型→造型</div>
+        </div>
+        <div class="card border-2 border-glaze-500 rounded-2xl p-5 bg-glaze-500/15">
+          <div class="font-display italic text-3xl text-glaze-500 mb-3">DAY 3</div>
+          <div class="text-glaze-500 text-xs tracking-widest mb-2">CO-STAR DAY ⭐</div>
+          <div class="font-serif-cn text-xl mb-2 text-cream">双女主日</div>
+          <div class="text-cream/60 text-xs leading-relaxed">仅限闺蜜结伴入场 · 限定双人杯 · 双人拍立得</div>
+        </div>
+        <div class="card border border-glaze-500/30 rounded-2xl p-5 bg-gradient-to-b from-glaze-500/10 to-transparent">
+          <div class="font-display italic text-3xl text-glaze-500 mb-3">DAY 4</div>
+          <div class="text-glaze-500 text-xs tracking-widest mb-2">DIRECTOR'S CUT</div>
+          <div class="font-serif-cn text-xl mb-2 text-cream">自导自演日</div>
+          <div class="text-cream/50 text-xs leading-relaxed">DIY 个人剧本 · 拍立得相机区 · 个人短片创作</div>
+        </div>
+        <div class="card border border-glaze-500/30 rounded-2xl p-5 bg-gradient-to-b from-glaze-500/10 to-transparent">
+          <div class="font-display italic text-3xl text-glaze-500 mb-3">DAY 5</div>
+          <div class="text-glaze-500 text-xs tracking-widest mb-2">RED CARPET</div>
+          <div class="font-serif-cn text-xl mb-2 text-cream">红毯日</div>
+          <div class="text-cream/50 text-xs leading-relaxed">个人电影海报 · 礼服试穿 · Pet Day（宠物也是主角）</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- ░░░ 11 · CAMPAIGN PHASING · 12 周 ░░░ -->
+<!-- ════════════════════════════════════════ -->
+<section id="phasing" class="section relative bg-cream text-ink overflow-hidden">
+  <div class="max-w-[1500px] mx-auto">
+    <div class="text-xs tracking-[0.6em] uppercase text-glaze-600 mb-4">Chapter 11 · Campaign Phasing</div>
+    <h2 class="font-display text-5xl md:text-7xl mb-2 leading-[0.95]">12 周节奏 ·</h2>
+    <h2 class="font-display italic text-5xl md:text-7xl mb-12 leading-[0.95] rose-gold-text">主角的两幕戏。</h2>
+
+    <!-- TIMELINE -->
+    <div class="relative bg-cream border border-glaze-500/30 rounded-3xl p-6 md:p-12 mb-12">
+      <div class="flex flex-wrap md:flex-nowrap items-stretch gap-1 md:gap-3 text-xs">
+        <div class="md:flex-[3] bg-glaze-500/10 rounded-xl p-4 border-l-4 border-glaze-500/40">
+          <div class="text-glaze-700 font-bold tracking-widest mb-1">PRE-LAUNCH · W-3 ~ W-1</div>
+          <div class="font-serif-cn font-semibold text-base mb-1">预热</div>
+          <div class="text-ink/60 leading-relaxed">Teaser KV · 闺蜜征集 UGC · 海外 KOC seeding · "主角光环上线"话题铺垫</div>
+        </div>
+        <div class="md:flex-[6] bg-glaze-500/15 rounded-xl p-4 border-l-4 border-glaze-500">
+          <div class="text-glaze-700 font-bold tracking-widest mb-1">WAVE 1 · W1 ~ W6 (JUL)</div>
+          <div class="font-serif-cn font-semibold text-base mb-1">第 1 集 · 开机仪式</div>
+          <div class="text-ink/60 leading-relaxed">7/4 杨幂 KV · 7/8 PR Day · 7/15 The AURA CAFÉ 开业 · 7/22 5 大主题日 · 7/29 收割</div>
+        </div>
+        <div class="md:flex-[6] bg-glaze-500/15 rounded-xl p-4 border-l-4 border-glaze-500">
+          <div class="text-glaze-700 font-bold tracking-widest mb-1">WAVE 2 · W7 ~ W12 (AUG)</div>
+          <div class="font-serif-cn font-semibold text-base mb-1">第 2 集 · 双女主同框</div>
+          <div class="text-ink/60 leading-relaxed">8/1 香水首发 · 8/3 Bestie Gifting 上线 · 8/8 双女主日 · 8/15 KOL 收割 · 8/22 中秋礼赠 · 8/29 战报</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHANNEL DISTRIBUTION -->
+    <div class="grid md:grid-cols-2 gap-12 mb-12">
+      <div>
+        <div class="text-glaze-700 text-xs tracking-[0.5em] mb-3">CHANNEL · WAVE 1</div>
+        <h3 class="font-display text-2xl md:text-3xl mb-6">教育 · 打爆发膜</h3>
+        <div class="space-y-3">
+          <div class="flex justify-between items-center border-b border-glaze-500/20 pb-2">
+            <span class="font-serif-cn">小红书</span><span class="text-ink/60 text-sm">发膜居家 ritual UGC</span>
+          </div>
+          <div class="flex justify-between items-center border-b border-glaze-500/20 pb-2">
+            <span class="font-serif-cn">抖音</span><span class="text-ink/60 text-sm">"开机仪式挑战"</span>
+          </div>
+          <div class="flex justify-between items-center border-b border-glaze-500/20 pb-2">
+            <span class="font-serif-cn">微博</span><span class="text-ink/60 text-sm">杨幂 KV / #主角光环上线#</span>
+          </div>
+          <div class="flex justify-between items-center border-b border-glaze-500/20 pb-2">
+            <span class="font-serif-cn">天猫</span><span class="text-ink/60 text-sm">发膜首发资源位</span>
+          </div>
+          <div class="flex justify-between items-center border-b border-glaze-500/20 pb-2">
+            <span class="font-serif-cn">丝芙兰</span><span class="text-ink/60 text-sm">线下首发陈列</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="text-glaze-700 text-xs tracking-[0.5em] mb-3">CHANNEL · WAVE 2</div>
+        <h3 class="font-display text-2xl md:text-3xl mb-6">放大 · 香水 + Bestie</h3>
+        <div class="space-y-3">
+          <div class="flex justify-between items-center border-b border-glaze-500/20 pb-2">
+            <span class="font-serif-cn">小红书</span><span class="text-ink/60 text-sm">闺蜜双女主同款打卡</span>
+          </div>
+          <div class="flex justify-between items-center border-b border-glaze-500/20 pb-2">
+            <span class="font-serif-cn">抖音</span><span class="text-ink/60 text-sm">"双女主同框运镜挑战"</span>
+          </div>
+          <div class="flex justify-between items-center border-b border-glaze-500/20 pb-2">
+            <span class="font-serif-cn">微博</span><span class="text-ink/60 text-sm">Bestie 礼赠话题</span>
+          </div>
+          <div class="flex justify-between items-center border-b border-glaze-500/20 pb-2">
+            <span class="font-serif-cn">天猫</span><span class="text-ink/60 text-sm">Gifting 资源位</span>
+          </div>
+          <div class="flex justify-between items-center border-b border-glaze-500/20 pb-2">
+            <span class="font-serif-cn">线下 IP</span><span class="text-ink/60 text-sm">The AURA CAFÉ 持续</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- YANG MI KV -->
+    <div class="bg-ink text-cream rounded-3xl p-8 md:p-12 grid md:grid-cols-12 gap-8 items-center">
+      <div class="md:col-span-5">
+        <div class="img-reveal rounded-2xl overflow-hidden aspect-[2/3] bg-glaze-500/10">
+          <img src="../images/cmp01-yangmi-style-kv.png" class="w-full h-full object-cover" onerror="this.style.opacity=0">
+        </div>
+      </div>
+      <div class="md:col-span-7">
+        <div class="text-glaze-500 text-xs tracking-widest mb-3">CELEBRITY KV · YANG MI 杨幂</div>
+        <h3 class="font-display text-3xl md:text-5xl mb-6 leading-tight">她是亿万人心中的<br><span class="rose-gold-text">主角。</span></h3>
+        <p class="font-serif-cn text-lg text-cream/80 mb-3 leading-relaxed">
+          她的光，从来都是<strong>自己亮的。</strong>
+        </p>
+        <p class="font-display italic text-cream/60 text-sm mb-6">
+          Borrowing the Cannes Film GP "Ilon Specht" model — slogan as cultural artifact.
+        </p>
+        <div class="text-cream/50 text-xs italic">→ 杨幂被塑造为"中国版主角"文化符号 · 长效代言资产</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- ░░░ 12 · KV ASSET GALLERY ░░░ -->
+<!-- ════════════════════════════════════════ -->
+<section id="kv" class="section grain relative">
+  <div class="max-w-[1500px] mx-auto">
+    <div class="text-xs tracking-[0.6em] uppercase text-glaze-500 mb-4">Chapter 12 · KV Gallery</div>
+    <h2 class="font-display text-5xl md:text-7xl mb-2 leading-[0.95]">主角光环 ·</h2>
+    <h2 class="font-display italic text-5xl md:text-7xl mb-12 leading-[0.95] rose-gold-text">视觉资产全集。</h2>
+
+    <p class="font-serif-cn max-w-3xl text-lg md:text-xl mb-12 text-cream/70 leading-relaxed">
+      32 张 KV / 产品 / 物料 · 全部由 <span class="text-glaze-500 font-semibold">GPT-Image-2</span> 生成。<br>
+      下方为所有视觉资产，可直接用于 Wave 2 投放。
+    </p>
+
+    <!-- ASSET GRID -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div class="img-reveal rounded-2xl overflow-hidden aspect-[3/2] col-span-2 md:col-span-3 bg-glaze-500/10"><img src="../images/kv01-master-hero.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+
+      <div class="img-reveal rounded-2xl overflow-hidden aspect-[3/2] bg-glaze-500/10"><img src="../images/kv02-wave1-opening-scene.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+      <div class="img-reveal rounded-2xl overflow-hidden aspect-[3/2] bg-glaze-500/10"><img src="../images/kv03-wave2-co-stars.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+      <div class="img-reveal rounded-2xl overflow-hidden aspect-[3/2] bg-glaze-500/10"><img src="../images/kv04-aura-cafe-exterior.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+
+      <div class="img-reveal rounded-2xl overflow-hidden aspect-square bg-glaze-500/10"><img src="../images/prd01-mask-product.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+      <div class="img-reveal rounded-2xl overflow-hidden aspect-square bg-glaze-500/10"><img src="../images/prd02-mask-texture-macro.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+      <div class="img-reveal rounded-2xl overflow-hidden aspect-square bg-glaze-500/10"><img src="../images/prd03-mist-product.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+      <div class="img-reveal rounded-2xl overflow-hidden aspect-square bg-glaze-500/10"><img src="../images/prd04-mist-spray-moment.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+      <div class="img-reveal rounded-2xl overflow-hidden aspect-square bg-glaze-500/10"><img src="../images/prd05-glaze-drop-glow.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+
+      <div class="img-reveal rounded-2xl overflow-hidden aspect-[3/2] col-span-2 md:col-span-3 bg-glaze-500/10"><img src="../images/prd06-bestie-box-4tier.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+
+      <div class="img-reveal rounded-2xl overflow-hidden aspect-[3/2] col-span-2 md:col-span-3 bg-glaze-500/10"><img src="../images/cmp02-ooh-billboard.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+
+      <div class="img-reveal rounded-2xl overflow-hidden aspect-[2/3] bg-glaze-500/10"><img src="../images/cmp03-subway-lightbox.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+      <div class="img-reveal rounded-2xl overflow-hidden aspect-[2/3] bg-glaze-500/10"><img src="../images/cmp01-yangmi-style-kv.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+      <div class="img-reveal rounded-2xl overflow-hidden aspect-[2/3] bg-glaze-500/10 grid grid-rows-2 gap-2">
+        <img src="../images/cmp04-social-cover.png" class="w-full h-full object-cover" onerror="this.style.opacity=0">
+      </div>
+
+      <div class="img-reveal rounded-2xl overflow-hidden aspect-[3/2] col-span-2 md:col-span-2 bg-glaze-500/10"><img src="../images/ip01-aura-cafe-interior.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+      <div class="img-reveal rounded-2xl overflow-hidden aspect-square bg-glaze-500/10"><img src="../images/ip02-gloss-bear-mascot.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+
+      <div class="img-reveal rounded-2xl overflow-hidden aspect-[3/2] col-span-2 md:col-span-2 bg-glaze-500/10"><img src="../images/ip03-collab-desserts.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+      <div class="img-reveal rounded-2xl overflow-hidden aspect-square bg-glaze-500/10"><img src="../images/ip04-takeaway-souvenirs.png" class="w-full h-full object-cover" onerror="this.style.opacity=0"></div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- ░░░ 13 · OUTCOME · 影响力预测 ░░░ -->
+<!-- ════════════════════════════════════════ -->
+<section id="outcome" class="section relative bg-cream text-ink">
+  <div class="max-w-[1500px] mx-auto">
+    <div class="text-xs tracking-[0.6em] uppercase text-glaze-600 mb-4">Chapter 13 · Predicted Outcome</div>
+    <h2 class="font-display text-5xl md:text-7xl mb-2 leading-[0.95]">这场戏，</h2>
+    <h2 class="font-display italic text-5xl md:text-7xl mb-12 leading-[0.95] rose-gold-text">能演到哪里？</h2>
+
+    <!-- SALES FORECAST -->
+    <div class="mb-16">
+      <div class="text-glaze-700 text-xs tracking-[0.5em] mb-3">SALES FORECAST · WAVE 2</div>
+      <h3 class="font-display text-3xl md:text-5xl mb-8">销售预测 · <span class="rose-gold-text">线性外推</span></h3>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left">
+          <thead>
+            <tr class="border-b border-glaze-500/30 text-glaze-700 text-xs tracking-widest">
+              <th class="py-4 pr-4">指标</th>
+              <th class="py-4 px-4 text-right">Wave 1 实际</th>
+              <th class="py-4 px-4 text-right">Wave 2 预测</th>
+              <th class="py-4 px-4">推导逻辑</th>
+            </tr>
+          </thead>
+          <tbody class="font-serif-cn">
+            <tr class="border-b border-glaze-500/10">
+              <td class="py-3 pr-4">系列销售额</td>
+              <td class="py-3 px-4 text-right text-ink/60">3,700 万</td>
+              <td class="py-3 px-4 text-right text-glaze-700 font-bold">6,800 万 <span class="text-xs">+84%</span></td>
+              <td class="py-3 px-4 text-ink/60 text-sm">双爆品 + Bestie 客单价提升</td>
+            </tr>
+            <tr class="border-b border-glaze-500/10">
+              <td class="py-3 pr-4">发膜销量</td>
+              <td class="py-3 px-4 text-right text-ink/60">N/A</td>
+              <td class="py-3 px-4 text-right text-glaze-700 font-bold">45,000 罐</td>
+              <td class="py-3 px-4 text-ink/60 text-sm">对标黑钻发膜 #2 SKU</td>
+            </tr>
+            <tr class="border-b border-glaze-500/10">
+              <td class="py-3 pr-4">香水销量</td>
+              <td class="py-3 px-4 text-right text-ink/60">N/A</td>
+              <td class="py-3 px-4 text-right text-glaze-700 font-bold">18,000 支 <span class="text-xs">+20%</span></td>
+              <td class="py-3 px-4 text-ink/60 text-sm">超过客户原 15K 目标</td>
+            </tr>
+            <tr class="border-b border-glaze-500/10">
+              <td class="py-3 pr-4">小粉珠 repush</td>
+              <td class="py-3 px-4 text-right text-ink/60">5.8 万瓶</td>
+              <td class="py-3 px-4 text-right text-glaze-700 font-bold">12 万瓶 <span class="text-xs">+106%</span></td>
+              <td class="py-3 px-4 text-ink/60 text-sm">涨价 + 系列势能</td>
+            </tr>
+            <tr class="border-b border-glaze-500/10">
+              <td class="py-3 pr-4">客单价</td>
+              <td class="py-3 px-4 text-right text-ink/60">¥385</td>
+              <td class="py-3 px-4 text-right text-glaze-700 font-bold">¥528</td>
+              <td class="py-3 px-4 text-ink/60 text-sm">Bestie 礼盒拉动</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- SOCIAL FORECAST -->
+    <div class="mb-16">
+      <div class="text-glaze-700 text-xs tracking-[0.5em] mb-3">SOCIAL VOICE FORECAST</div>
+      <h3 class="font-display text-3xl md:text-5xl mb-8">声量 · <span class="rose-gold-text">2 亿+ 跑起来</span></h3>
+      <div class="grid md:grid-cols-4 gap-4">
+        <div class="card bg-cream border border-glaze-500/30 rounded-2xl p-6">
+          <div class="text-glaze-700 text-xs tracking-widest mb-2">小红书 UGC</div>
+          <div class="num-display text-5xl rose-gold-text mb-1">15K+</div>
+          <div class="text-ink/50 text-xs">vs Wave 1: 5,634 (+166%)</div>
+        </div>
+        <div class="card bg-cream border border-glaze-500/30 rounded-2xl p-6">
+          <div class="text-glaze-700 text-xs tracking-widest mb-2">微博话题</div>
+          <div class="num-display text-5xl rose-gold-text mb-1">5亿+</div>
+          <div class="text-ink/50 text-xs">#主角光环上线#</div>
+        </div>
+        <div class="card bg-cream border border-glaze-500/30 rounded-2xl p-6">
+          <div class="text-glaze-700 text-xs tracking-widest mb-2">抖音挑战</div>
+          <div class="num-display text-5xl rose-gold-text mb-1">3亿+</div>
+          <div class="text-ink/50 text-xs">#开机仪式挑战#</div>
+        </div>
+        <div class="card bg-cream border border-glaze-500/30 rounded-2xl p-6">
+          <div class="text-glaze-700 text-xs tracking-widest mb-2">PSR</div>
+          <div class="num-display text-5xl rose-gold-text mb-1">95%+</div>
+          <div class="text-ink/50 text-xs">解决 Wave 1 油腻舆情</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TA Age Decline -->
+    <div class="mb-16 grid md:grid-cols-3 gap-6">
+      <div class="card bg-glaze-500/5 border border-glaze-500/30 rounded-2xl p-6">
+        <div class="text-glaze-700 text-xs tracking-widest mb-2">CLIENT TARGET</div>
+        <div class="font-serif-cn text-lg mb-3">招募 Younger 客群</div>
+        <div class="flex items-center gap-3 mb-2">
+          <span class="font-display text-4xl text-ink/40 line-through">29.8</span>
+          <span class="text-glaze-700">→</span>
+          <span class="font-display text-5xl rose-gold-text font-bold">27.5</span>
+        </div>
+        <div class="text-ink/50 text-xs">Bestie Gifting 购买者年龄</div>
+      </div>
+      <div class="card bg-glaze-500/5 border border-glaze-500/30 rounded-2xl p-6">
+        <div class="text-glaze-700 text-xs tracking-widest mb-2">BRAND-WIDE</div>
+        <div class="font-serif-cn text-lg mb-3">品牌均购买年龄</div>
+        <div class="flex items-center gap-3 mb-2">
+          <span class="font-display text-4xl text-ink/40 line-through">31.3</span>
+          <span class="text-glaze-700">→</span>
+          <span class="font-display text-5xl rose-gold-text font-bold">29.0</span>
+        </div>
+        <div class="text-ink/50 text-xs">下沉 2.3 岁</div>
+      </div>
+      <div class="card bg-glaze-500/5 border border-glaze-500/30 rounded-2xl p-6">
+        <div class="text-glaze-700 text-xs tracking-widest mb-2">GENZ PENETRATION</div>
+        <div class="font-serif-cn text-lg mb-3">18-24 岁占比</div>
+        <div class="flex items-center gap-3 mb-2">
+          <span class="font-display text-4xl text-ink/40 line-through">22%</span>
+          <span class="text-glaze-700">→</span>
+          <span class="font-display text-5xl rose-gold-text font-bold">35%</span>
+        </div>
+        <div class="text-ink/50 text-xs">+13 个百分点</div>
+      </div>
+    </div>
+
+    <!-- AWARDS PATH -->
+    <div class="bg-ink text-cream rounded-3xl p-8 md:p-12">
+      <div class="text-glaze-500 text-xs tracking-[0.5em] mb-3">INTERNATIONAL AWARDS PATH · 国际获奖路径</div>
+      <h3 class="font-display text-3xl md:text-5xl mb-8">送选 <span class="rose-gold-text">Cannes Lions 2027</span></h3>
+
+      <div class="grid md:grid-cols-4 gap-4">
+        <div class="border border-glaze-500/30 rounded-2xl p-5">
+          <div class="font-display italic text-glaze-500 text-2xl mb-2">Glass GP</div>
+          <div class="font-serif-cn font-semibold mb-2">女性赋权</div>
+          <div class="text-cream/60 text-xs">主角光环 = 自我赋权宣言</div>
+        </div>
+        <div class="border border-glaze-500/30 rounded-2xl p-5">
+          <div class="font-display italic text-glaze-500 text-2xl mb-2">Brand Experience</div>
+          <div class="font-serif-cn font-semibold mb-2">沉浸式空间</div>
+          <div class="text-cream/60 text-xs">The AURA CAFÉ × 13 de Marzo</div>
+        </div>
+        <div class="border border-glaze-500/30 rounded-2xl p-5">
+          <div class="font-display italic text-glaze-500 text-2xl mb-2">Design</div>
+          <div class="font-serif-cn font-semibold mb-2">徽章系列</div>
+          <div class="text-cream/60 text-xs">主角徽章 · Aura Badges</div>
+        </div>
+        <div class="border border-glaze-500/30 rounded-2xl p-5">
+          <div class="font-display italic text-glaze-500 text-2xl mb-2">Film</div>
+          <div class="font-serif-cn font-semibold mb-2">manifesto 短片</div>
+          <div class="text-cream/60 text-xs">杨幂 × Ilon Specht 同款</div>
+        </div>
+      </div>
+      <div class="text-cream/40 text-xs mt-6 italic">同步送选：上海广告节 · 龙玺奖 · Adstars · Spikes Asia</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- ░░░ 14 · WHY US · CTA ░░░ -->
+<!-- ════════════════════════════════════════ -->
+<section id="why" class="section grain relative flex items-center overflow-hidden">
+  <div class="bloom bloom-1 absolute -top-40 -left-40"></div>
+  <div class="bloom bloom-2 absolute -bottom-40 -right-40"></div>
+
+  <div class="max-w-4xl mx-auto text-center relative z-10">
+    <div class="text-xs tracking-[0.6em] uppercase text-glaze-500 mb-12">Chapter 14 · Why Us</div>
+
+    <h2 class="font-display text-5xl md:text-7xl mb-12 leading-[0.95]">我们读懂了 <br><span class="rose-gold-text italic">中文里的高光。</span></h2>
+
+    <div class="font-serif-cn text-xl md:text-2xl text-cream/80 leading-relaxed space-y-6 mb-16">
+      <p>我们不只是写文案、画 KV。</p>
+      <p>我们读懂了<span class="text-glaze-500 font-semibold">中文「高光」的双关金矿</span>——这是英语广告人做不到的。</p>
+      <p>我们把卡诗从<em>"高光美发品牌"</em>，升格为 <span class="rose-gold-text font-semibold">"主角光环品牌"</span>。</p>
+      <p>我们让发膜成为主角的开机仪式，<br>让香水成为双女主同框的镜头，<br>让礼盒成为闺蜜的共光胶囊。</p>
+      <p>我们让卡诗的下一个十年，<br>从这一句开始——</p>
+    </div>
+
+    <div class="border border-glaze-500/40 rounded-3xl p-8 md:p-12 bg-glaze-500/5 backdrop-blur-md mb-12">
+      <div class="font-serif-cn text-3xl md:text-5xl mb-3 rose-gold-text font-semibold">主角的光，<br>从一抹釉光开始。</div>
+      <div class="font-display italic text-base md:text-xl text-cream/60 tracking-wider mt-4">THE GLOSS OF THE MAIN CHARACTER.</div>
+    </div>
+
+    <div class="text-cream/50 text-xs tracking-[0.4em] uppercase mb-2">PRESS TO GLOW</div>
+    <div class="text-cream/30 text-xs">— END · 2026.05 · Wave 2 IMC Pitch · v 2.0 —</div>
+  </div>
+</section>
+
+
+<!-- ░░░ FOOTER ░░░ -->
+<footer class="bg-ink border-t border-glaze-500/10 py-12 px-6 text-center text-xs tracking-[0.3em] text-cream/30 relative z-10">
+  <div class="max-w-4xl mx-auto space-y-3">
+    <div class="font-display italic">Kérastase × Glossy Girls · 主角光环 ✦ MAIN CHARACTER AURA</div>
+    <div>32 KV · 14 Chapters · 1 Big Idea</div>
+    <div class="text-cream/20">All visuals generated by GPT-Image-2 · Web crafted with Tailwind · Pitched 2026.05.06</div>
+  </div>
+</footer>
+
+
+<!-- ░░░ SCROLL OBSERVER ░░░ -->
+<script>
+// Reveal-on-scroll
+const obs = new IntersectionObserver((entries) => {
+  for (const e of entries) {
+    if (e.isIntersecting) e.target.classList.add('in');
+  }
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Auto-add reveal to direct children of sections
+document.querySelectorAll('.section > div, .section h2, .section h3').forEach(el => {
+  if (!el.classList.contains('reveal')) {
+    el.classList.add('reveal');
+    obs.observe(el);
+  }
+});
+
+// Section dot nav active state
+const sections = document.querySelectorAll('section[id]');
+const dots = document.querySelectorAll('.nav-dot');
+const sectionObs = new IntersectionObserver((entries) => {
+  for (const e of entries) {
+    if (e.isIntersecting) {
+      const id = e.target.id;
+      dots.forEach(d => d.classList.toggle('active', d.getAttribute('href') === '#' + id));
+    }
+  }
+}, { threshold: 0.4 });
+sections.forEach(s => sectionObs.observe(s));
+
+// Image load fallback
+document.querySelectorAll('img').forEach(img => {
+  img.addEventListener('error', () => { img.style.opacity = '0.1'; img.style.filter = 'blur(20px)'; });
+});
+</script>
+
+</body>
+</html>
