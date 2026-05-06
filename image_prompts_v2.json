@@ -1,0 +1,84 @@
+{
+  "_meta": {
+    "model": "gpt-image-2-all",
+    "endpoint": "https://api.apiyi.com/v1/images/generations",
+    "campaign": "Kérastase GLOSS Wave 2 v2 — MAIN CHARACTER AURA · MIRROR HOUR",
+    "style_baseline": "Editorial luxury beauty photography, soft natural light, magazine quality, rose-gold + glaze pink + cream palette, hyper-realistic, no text or letters on image, shallow depth of field, film grain texture, 35mm aesthetic.",
+    "negative_global": "no text, no chinese characters, no english letters, no logos visible, no watermark, no signature, no captions",
+    "total": 8
+  },
+  "images": [
+    {
+      "id": "V2-01",
+      "filename": "v2-01-mirror-hour-installation.png",
+      "section": "镜光时刻 · 6 米巨镜装置",
+      "title": "The MIRROR HOUR · 6m Glaze Installation",
+      "size": "1536x1024",
+      "prompt": "Architectural installation photograph in a French-quarter courtyard in Shanghai (Anfu Road style — emerald green window frames, century-old plane trees, French colonial architecture). Center of the courtyard: a giant 6-meter-tall sculptural mirror installation, shaped like a curved petal — the mirror surface is a gradient rose-gold to pink, with a subtle 'glaze' wet-look finish that reflects everything around it. Surrounding the installation: tall vases of fresh pink garden roses, small marble cocktail tables, a few young Asian women in chic outfits taking photos. Late afternoon golden hour light catching the mirror's surface. Mood: cinematic, luxurious, fashion magazine spread. Style: high-end retail visualization, photoreal, Vogue editorial quality. Absolutely no text. Aspect 3:2.",
+      "purpose": "Replace previous AURA CAFÉ exterior — new visual anchor for white-space strategy"
+    },
+    {
+      "id": "V2-02",
+      "filename": "v2-02-rac-bar-courtyard.png",
+      "section": "RAC BAR 安福路院落改造",
+      "title": "RAC BAR Anfu Lu × Kérastase Pop-Up",
+      "size": "1536x1024",
+      "prompt": "Architectural visualization of a French-quarter Shanghai courtyard café (inspired by RAC BAR on Anfu Lu): emerald-green wooden window frames, century-old plane tree shadow on stone walls, vintage cobblestone courtyard. The courtyard has been transformed into a pink rose garden pop-up: pink petals scattered on stone floor, fresh pink rose arrangements in tall classical urns, a small French bistro table set with rose-gold cutlery, an elegant gilt mirror leaning against the green wall. A small repurposed security-booth-turned-coffee-window in the foreground, decorated with hanging wisteria of pink roses. Late afternoon warm light filtering through plane tree leaves. Mood: French Parisian garden meets Shanghai elegance. Style: editorial architecture photography, hyper-realistic. Absolutely no text. Aspect 3:2.",
+      "purpose": "Show the RAC BAR Anfu Lu courtyard transformation"
+    },
+    {
+      "id": "V2-03",
+      "filename": "v2-03-fascino-bakery-pink.png",
+      "section": "FASCINO 茂名北路丰盛里",
+      "title": "FASCINO × Kérastase Wave 1 morning",
+      "size": "1536x1024",
+      "prompt": "French bakery storefront in Shanghai's Fengsheng Li lane (Maoming Bei Lu): elegant Parisian-style facade with large floor-to-ceiling windows, soft pink awning, vintage gold lettering removed. Inside the window display: rows of pink-glazed croissants, rose-strawberry bagels, marble counter with fresh pink roses, pink ribbon tags on each item. Outside: cobbled lane with stone-gate (shikumen) architecture in soft brick-red, a young Asian woman in a cream silk dress standing before the window with a takeaway pink paper bag, smiling. Morning light, peaceful early hour. Mood: Parisian morning ritual in Shanghai. Style: editorial lifestyle photography, magazine quality. Absolutely no readable text. Aspect 3:2.",
+      "purpose": "Visualize FASCINO partnership Wave 1 morning ritual"
+    },
+    {
+      "id": "V2-04",
+      "filename": "v2-04-conniehe-westbund.png",
+      "section": "ConnieHe 西岸梦中心",
+      "title": "ConnieHe × Kérastase Wave 2 evening",
+      "size": "1536x1024",
+      "prompt": "Modern minimalist café interior at the Westbund waterfront, Shanghai: floor-to-ceiling glass walls overlooking the Huangpu River at sunset, polished concrete and brushed-brass design (inspired by Atelier Deshaus), long marble bar counter. The bar is dressed in a Kérastase pop-up theme: pink rose petals scattered, rose-gold accent ribbons, elegant cake displays of pink chiffon cakes and rose gelato in glass cloches. A pair of Asian women in their early 20s sitting at the bar, sharing a tray of desserts and pink rose lattes, engaged in intimate laugh. Soft golden hour light streaming in. Mood: West Bund elegance meets Bestie tea-time. Style: high-end editorial, hyper-realistic. Absolutely no text. Aspect 3:2.",
+      "purpose": "Visualize ConnieHe partnership Wave 2 closing"
+    },
+    {
+      "id": "V2-05",
+      "filename": "v2-05-glass-hair-mirror.png",
+      "section": "Glass Hair · 玻璃发文化锚",
+      "title": "Glass Hair Visualization",
+      "size": "1024x1024",
+      "prompt": "Macro hair photography. Extreme close-up of long luminous black East Asian hair, captured at the moment of motion mid-flip. The hair surface has a hyper-real mirror-like quality — like polished obsidian or wet glass — every individual strand reflecting tiny points of warm light, creating a glass-like glaze effect. Soft pink rose petals are caught mid-air around the flying hair. Background: out-of-focus rose-gold and cream gradient bokeh. Lighting: dramatic side-light to maximize the glass-hair gleam. Style: ultra-detail beauty editorial close-up, magazine cover quality. Absolutely no text. Aspect 1:1.",
+      "purpose": "Visual anchor for Glass Hair / 玻璃发 cultural concept"
+    },
+    {
+      "id": "V2-06",
+      "filename": "v2-06-aura-mirror-gwp.png",
+      "section": "GWP · Aura Mirror 主角光环镜",
+      "title": "Aura Mirror GWP",
+      "size": "1024x1024",
+      "prompt": "Luxury accessory product flat-lay photograph. A round rose-gold compact mirror (about 7cm diameter) with intricate engraved details on the back — the front mirror surface is dramatically polished and reflects soft pink rose petals around it. Beside the mirror: a vintage-style rose-gold pocket watch (closed), 4 enamel pin badges in pink and gold (with abstract symbols — crown, star, heart, sparkle, NO readable text), a rose-gold key ring with a small letter 'K' charm. Cream linen background scattered with fresh pink rose petals. Lighting: soft north window light, magazine catalog quality. Hyper-realistic. Absolutely no text. Aspect 1:1.",
+      "purpose": "Replace Gloss Bear GWP with Aura Mirror & Pin set"
+    },
+    {
+      "id": "V2-07",
+      "filename": "v2-07-anti-counterfeit-qr.png",
+      "section": "假货焦虑解决方案 · 货源溯源",
+      "title": "Anti-Counterfeit Authentication",
+      "size": "1024x1024",
+      "prompt": "Editorial product photograph showing the back of a luxury rose-gold ceramic hair mask jar held by an elegant feminine hand with pearl-pink manicure. The hand is using a smartphone (out of focus in foreground) with a glowing UI accent that suggests scanning a small holographic anchor seal embossed on the jar's back — the seal has a luxurious metallic sheen. The aesthetic is calm, trustworthy, and luxury. Background: soft cream marble with scattered fresh pink rose petals. Mood: 'verify, then trust.' Style: high-end e-commerce editorial photography, hyper-realistic. Absolutely no readable text or QR code dots — just an abstract luxurious authentication mark. Aspect 1:1.",
+      "purpose": "Visualize the anti-counterfeit consumer education layer"
+    },
+    {
+      "id": "V2-08",
+      "filename": "v2-08-yang-mi-mirror-hour.png",
+      "section": "Yang Mi style KV — Mirror Hour",
+      "title": "Brand Ambassador KV · Mirror Hour Edition",
+      "size": "1024x1536",
+      "prompt": "Vertical luxury celebrity portrait, magazine cover format. A stunning East Asian woman in her early 30s, with iconic flowing long luminous black hair captured mid-flow — the hair has an extreme mirror-like glass-glaze quality reflecting soft rose-gold light. She wears an elegant black silk gown with a deep neckline, looking directly at camera with confident, slightly enigmatic gaze. She is positioned in a French-quarter courtyard at sunset (similar to Anfu Lu Shanghai) — emerald-green window frames blurred behind her, pink garden roses in tall vases. A halo of warm sunset light around her like a personal spotlight. She holds a transparent pink hair perfume bottle in one hand, and a rose-gold compact mirror in the other. Color palette: deep burgundy / glaze pink / rose gold / black. Style: luxury fashion magazine cover, dramatic moody cinematic lighting, hyper-realistic. NOT modeled after any specific real celebrity — generic Asian beauty archetype. Absolutely no text. Aspect 2:3.",
+      "purpose": "Replace previous Yang Mi style KV with Mirror Hour theme"
+    }
+  ]
+}
