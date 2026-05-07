@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">一顺定高光护理流程示意</title>
+  <desc id="desc">本地生成的三步护理流程视觉：发膜深护、小粉珠补光、发香喷雾共享香气。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#fffaf8"/>
+      <stop offset="45%" stop-color="#f4c9bf"/>
+      <stop offset="100%" stop-color="#d7dee6"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0%" x2="100%">
+      <stop offset="0%" stop-color="#e7b0a5"/>
+      <stop offset="48%" stop-color="#f7f7f8"/>
+      <stop offset="100%" stop-color="#8f98a4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bg)"/>
+  <path d="M110 370 C250 190 382 510 540 330 C722 120 810 506 1090 240" fill="none" stroke="url(#line)" stroke-width="38" stroke-linecap="round" opacity=".78"/>
+  <g font-family="'PingFang SC', sans-serif" fill="#332b2a">
+    <g transform="translate(176 150)">
+      <circle cx="0" cy="0" r="94" fill="#ffffff" opacity=".88"/>
+      <text x="0" y="-12" text-anchor="middle" font-size="34">01</text>
+      <text x="0" y="32" text-anchor="middle" font-size="26">发膜深护</text>
+      <text x="0" y="144" text-anchor="middle" font-size="22">5 分钟顺亮底色</text>
+    </g>
+    <g transform="translate(602 350)">
+      <circle cx="0" cy="0" r="104" fill="#ffffff" opacity=".9"/>
+      <text x="0" y="-14" text-anchor="middle" font-size="38">02</text>
+      <text x="0" y="34" text-anchor="middle" font-size="28">小粉珠补光</text>
+      <text x="0" y="156" text-anchor="middle" font-size="22">出门前最后一滴</text>
+    </g>
+    <g transform="translate(985 190)">
+      <circle cx="0" cy="0" r="96" fill="#ffffff" opacity=".9"/>
+      <text x="0" y="-13" text-anchor="middle" font-size="35">03</text>
+      <text x="0" y="33" text-anchor="middle" font-size="26">发香同闪</text>
+      <text x="0" y="148" text-anchor="middle" font-size="22">见面前同款香气</text>
+    </g>
+  </g>
+</svg>

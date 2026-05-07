@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="天猫详情页 Mockup">
+  <defs>
+    <linearGradient id="paper" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#fffaf8"/>
+      <stop offset="50%" stop-color="#f6d7cf"/>
+      <stop offset="100%" stop-color="#e0e6eb"/>
+    </linearGradient>
+    <linearGradient id="ink" x1="0%" x2="100%">
+      <stop offset="0%" stop-color="#2d2625"/>
+      <stop offset="100%" stop-color="#594743"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="38%" stop-color="#d7dce3"/>
+      <stop offset="72%" stop-color="#a8b0bc"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="24" stdDeviation="20" flood-color="#3b2d2b" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#paper)"/>
+  <path d="M0 632 C230 520 340 742 558 594 C756 460 910 586 1200 430 L1200 800 L0 800 Z" fill="#fff" opacity=".48"/>
+  
+  <g filter="url(#shadow)">
+    <rect x="74" y="78" width="1052" height="640" fill="#fffefd" stroke="#2d2625" stroke-width="4"/>
+    <rect x="74" y="78" width="1052" height="72" fill="#2d2625"/>
+    <text x="112" y="125" font-family="'PingFang SC', sans-serif" font-size="26" font-weight="700" fill="#fff">天猫新品承接页 Demo</text>
+    <rect x="112" y="190" width="430" height="430" fill="#f8eee9"/>
+    <image href="product-mask.png" x="150" y="278" width="350" height="350"/>
+    <text x="600" y="224" font-family="Georgia, 'Songti SC', serif" font-size="42" fill="#2d2625">釉光奶皮子</text>
+    <text x="600" y="280" font-family="'PingFang SC', sans-serif" font-size="24" fill="#9f5a52">奶皮子润进发，4 天弹润抗躁</text>
+    <rect x="600" y="322" width="430" height="56" fill="#fff" stroke="#d8cbc7"/>
+    <text x="626" y="358" font-family="'PingFang SC', sans-serif" font-size="20" fill="#2d2625">模块 1：官方 claim + 法务脚注</text>
+    <rect x="600" y="400" width="430" height="56" fill="#fff" stroke="#d8cbc7"/>
+    <text x="626" y="436" font-family="'PingFang SC', sans-serif" font-size="20" fill="#2d2625">模块 2：三步正确用法图解</text>
+    <rect x="600" y="478" width="430" height="56" fill="#fff" stroke="#d8cbc7"/>
+    <text x="626" y="514" font-family="'PingFang SC', sans-serif" font-size="20" fill="#2d2625">模块 3：发膜 + 小粉珠套组</text>
+    <rect x="600" y="580" width="186" height="58" rx="29" fill="#9f5a52"/>
+    <text x="693" y="617" text-anchor="middle" font-family="'PingFang SC', sans-serif" font-size="22" fill="#fff">立即加购</text>
+  </g>
+</svg>

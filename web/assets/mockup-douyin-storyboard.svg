@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="抖音短视频分镜 Mockup">
+  <defs>
+    <linearGradient id="paper" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#fffaf8"/>
+      <stop offset="50%" stop-color="#f6d7cf"/>
+      <stop offset="100%" stop-color="#e0e6eb"/>
+    </linearGradient>
+    <linearGradient id="ink" x1="0%" x2="100%">
+      <stop offset="0%" stop-color="#2d2625"/>
+      <stop offset="100%" stop-color="#594743"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="38%" stop-color="#d7dce3"/>
+      <stop offset="72%" stop-color="#a8b0bc"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="24" stdDeviation="20" flood-color="#3b2d2b" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#paper)"/>
+  <path d="M0 632 C230 520 340 742 558 594 C756 460 910 586 1200 430 L1200 800 L0 800 Z" fill="#fff" opacity=".48"/>
+  
+  <g font-family="'PingFang SC', sans-serif">
+    <text x="70" y="92" font-size="34" font-weight="700" fill="#2d2625">抖音：出门前一喷 + 质地动效</text>
+    <text x="70" y="138" font-size="22" fill="#6f6360">15 秒视频模板，前 3 秒先给动作和结果，后 12 秒拆产品链路。</text>
+  </g>
+  
+    <g filter="url(#shadow)" transform="translate(70 190)">
+      <rect width="140" height="250" rx="24" fill="#2d2625"/>
+      <rect x="10" y="18" width="120" height="214" rx="16" fill="#f7ddd6"/>
+      <text x="70" y="92" text-anchor="middle" font-family="Georgia, serif" font-size="42" fill="#2d2625">HOOK</text><text x="70" y="128" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="16" fill="#6f6360">毛躁发尾</text>
+      
+      
+      
+      
+      
+      <circle cx="70" cy="244" r="4" fill="#fff"/>
+    </g>
+    <g filter="url(#shadow)" transform="translate(248 190)">
+      <rect width="140" height="250" rx="24" fill="#2d2625"/>
+      <rect x="10" y="18" width="120" height="214" rx="16" fill="#fffefd"/>
+      
+      <image href="product-mask.png" x="18" y="58" width="104" height="104"/><text x="70" y="184" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="15" fill="#2d2625">奶皮上发</text>
+      
+      
+      
+      
+      <circle cx="70" cy="244" r="4" fill="#fff"/>
+    </g>
+    <g filter="url(#shadow)" transform="translate(426 190)">
+      <rect width="140" height="250" rx="24" fill="#2d2625"/>
+      <rect x="10" y="18" width="120" height="214" rx="16" fill="#f7ddd6"/>
+      
+      
+      <path d="M30 150 C54 60 96 60 114 150" fill="none" stroke="#9f5a52" stroke-width="10" stroke-linecap="round"/><text x="70" y="188" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="15" fill="#2d2625">顺亮对比</text>
+      
+      
+      
+      <circle cx="70" cy="244" r="4" fill="#fff"/>
+    </g>
+    <g filter="url(#shadow)" transform="translate(604 190)">
+      <rect width="140" height="250" rx="24" fill="#2d2625"/>
+      <rect x="10" y="18" width="120" height="214" rx="16" fill="#fffefd"/>
+      
+      
+      
+      <image href="product-oil-packshot.png" x="24" y="50" width="96" height="96"/><text x="70" y="184" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="15" fill="#2d2625">补一滴</text>
+      
+      
+      <circle cx="70" cy="244" r="4" fill="#fff"/>
+    </g>
+    <g filter="url(#shadow)" transform="translate(782 190)">
+      <rect width="140" height="250" rx="24" fill="#2d2625"/>
+      <rect x="10" y="18" width="120" height="214" rx="16" fill="#f7ddd6"/>
+      
+      
+      
+      
+      <image href="product-parfum.png" x="28" y="46" width="90" height="90"/><path d="M36 40 C70 24 96 36 112 18" fill="none" stroke="#d78e82" stroke-width="5"/><text x="70" y="184" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="15" fill="#2d2625">出门一喷</text>
+      
+      <circle cx="70" cy="244" r="4" fill="#fff"/>
+    </g>
+    <g filter="url(#shadow)" transform="translate(960 190)">
+      <rect width="140" height="250" rx="24" fill="#2d2625"/>
+      <rect x="10" y="18" width="120" height="214" rx="16" fill="#fffefd"/>
+      
+      
+      
+      
+      
+      <text x="70" y="100" text-anchor="middle" font-family="Georgia, serif" font-size="38" fill="#2d2625">CTA</text><text x="70" y="138" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="15" fill="#6f6360">领试用 / 进店</text>
+      <circle cx="70" cy="244" r="4" fill="#fff"/>
+    </g>
+  <path d="M108 505 H1088" stroke="#2d2625" stroke-width="3" stroke-dasharray="10 12"/>
+  <text x="70" y="596" font-family="'PingFang SC', sans-serif" font-size="24" fill="#2d2625">转化链路：短视频种草 → 搜索品牌词 → 商品卡 / 直播间 → 套组成交</text>
+</svg>

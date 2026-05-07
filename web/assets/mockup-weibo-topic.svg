@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="微博话题页 Mockup">
+  <defs>
+    <linearGradient id="paper" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#fffaf8"/>
+      <stop offset="50%" stop-color="#f6d7cf"/>
+      <stop offset="100%" stop-color="#e0e6eb"/>
+    </linearGradient>
+    <linearGradient id="ink" x1="0%" x2="100%">
+      <stop offset="0%" stop-color="#2d2625"/>
+      <stop offset="100%" stop-color="#594743"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="38%" stop-color="#d7dce3"/>
+      <stop offset="72%" stop-color="#a8b0bc"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="24" stdDeviation="20" flood-color="#3b2d2b" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#paper)"/>
+  <path d="M0 632 C230 520 340 742 558 594 C756 460 910 586 1200 430 L1200 800 L0 800 Z" fill="#fff" opacity=".48"/>
+  
+  <g filter="url(#shadow)">
+    <rect x="82" y="84" width="1036" height="620" fill="#fffefd" stroke="#d8cbc7"/>
+    <rect x="82" y="84" width="1036" height="118" fill="#2d2625"/>
+    <text x="126" y="156" font-family="'PingFang SC', sans-serif" font-size="36" font-weight="700" fill="#fff">#一顺定高光和她同闪耀#</text>
+    <text x="126" y="234" font-family="'PingFang SC', sans-serif" font-size="22" fill="#9f5a52">品牌热搜 / 话题页 / 明星物料 / KOL 二创入口</text>
+    <rect x="126" y="270" width="430" height="354" fill="#f8eee9" stroke="#d8cbc7"/>
+    <image href="product-parfum.png" x="256" y="332" width="180" height="180"/>
+    <text x="158" y="568" font-family="'PingFang SC', sans-serif" font-size="24" fill="#2d2625">发香喷雾上市主帖</text>
+    <rect x="606" y="270" width="436" height="86" fill="#fff" stroke="#d8cbc7"/>
+    <text x="636" y="324" font-family="'PingFang SC', sans-serif" font-size="22" fill="#2d2625">置顶：Bestie Gifting 礼盒开箱视频</text>
+    <rect x="606" y="382" width="436" height="86" fill="#fff" stroke="#d8cbc7"/>
+    <text x="636" y="436" font-family="'PingFang SC', sans-serif" font-size="22" fill="#2d2625">二创：和闺蜜同款香气挑战</text>
+    <rect x="606" y="494" width="436" height="86" fill="#fff" stroke="#d8cbc7"/>
+    <text x="636" y="548" font-family="'PingFang SC', sans-serif" font-size="22" fill="#2d2625">导流：天猫 / 抖音电商新品页</text>
+  </g>
+</svg>

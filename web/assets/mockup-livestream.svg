@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="直播间 Mockup">
+  <defs>
+    <linearGradient id="paper" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#fffaf8"/>
+      <stop offset="50%" stop-color="#f6d7cf"/>
+      <stop offset="100%" stop-color="#e0e6eb"/>
+    </linearGradient>
+    <linearGradient id="ink" x1="0%" x2="100%">
+      <stop offset="0%" stop-color="#2d2625"/>
+      <stop offset="100%" stop-color="#594743"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="38%" stop-color="#d7dce3"/>
+      <stop offset="72%" stop-color="#a8b0bc"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="24" stdDeviation="20" flood-color="#3b2d2b" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#paper)"/>
+  <path d="M0 632 C230 520 340 742 558 594 C756 460 910 586 1200 430 L1200 800 L0 800 Z" fill="#fff" opacity=".48"/>
+  
+  <g filter="url(#shadow)">
+    <rect x="88" y="72" width="360" height="660" rx="38" fill="#2d2625"/>
+    <rect x="112" y="108" width="312" height="584" rx="24" fill="#f7ddd6"/>
+    <image href="product-mask.png" x="150" y="230" width="240" height="240"/>
+    <rect x="132" y="530" width="252" height="82" rx="20" fill="#fffefd"/>
+    <text x="152" y="566" font-family="'PingFang SC', sans-serif" font-size="19" fill="#2d2625">直播间套组卡</text>
+    <text x="152" y="596" font-family="'PingFang SC', sans-serif" font-size="17" fill="#9f5a52">发膜 + 小粉珠试用装</text>
+  </g>
+  <g font-family="'PingFang SC', sans-serif">
+    <text x="520" y="160" font-size="34" font-weight="700" fill="#2d2625">直播 Demo：BA 教育 + 套组成交</text>
+    <text x="520" y="216" font-size="22" fill="#6f6360">不是单纯叫卖，要把“用量、区域、时间、冲净”讲清楚。</text>
+    <rect x="520" y="282" width="560" height="72" fill="#fffefd" stroke="#d8cbc7"/>
+    <text x="552" y="328" font-size="22" fill="#2d2625">00-05 min：发质痛点开场，展示毛躁发尾</text>
+    <rect x="520" y="382" width="560" height="72" fill="#fffefd" stroke="#d8cbc7"/>
+    <text x="552" y="428" font-size="22" fill="#2d2625">05-15 min：发膜正确用法 + 小粉珠连带</text>
+    <rect x="520" y="482" width="560" height="72" fill="#fffefd" stroke="#d8cbc7"/>
+    <text x="552" y="528" font-size="22" fill="#2d2625">15-30 min：礼盒套组、GWP、试用装引导</text>
+  </g>
+</svg>

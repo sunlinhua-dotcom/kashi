@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="物料清单 Mockup">
+  <defs>
+    <linearGradient id="paper" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#fffaf8"/>
+      <stop offset="50%" stop-color="#f6d7cf"/>
+      <stop offset="100%" stop-color="#e0e6eb"/>
+    </linearGradient>
+    <linearGradient id="ink" x1="0%" x2="100%">
+      <stop offset="0%" stop-color="#2d2625"/>
+      <stop offset="100%" stop-color="#594743"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="38%" stop-color="#d7dce3"/>
+      <stop offset="72%" stop-color="#a8b0bc"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="24" stdDeviation="20" flood-color="#3b2d2b" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#paper)"/>
+  <path d="M0 632 C230 520 340 742 558 594 C756 460 910 586 1200 430 L1200 800 L0 800 Z" fill="#fff" opacity=".48"/>
+  
+  <g filter="url(#shadow)" font-family="'PingFang SC', sans-serif">
+    <rect x="92" y="80" width="1016" height="640" fill="#fffefd" stroke="#2d2625" stroke-width="4"/>
+    <text x="136" y="150" font-size="34" font-weight="700" fill="#2d2625">交付物清单</text>
+    <text x="136" y="194" font-size="21" fill="#6f6360">提案不止一页 Big Idea，必须把每个执行端口的物料做出来。</text>
+    
+      <rect x="136" y="238" width="420" height="50" fill="#f8eee9" stroke="#d8cbc7"/>
+      <circle cx="162" cy="263" r="10" fill="#9f5a52"/>
+      <text x="186" y="271" font-size="19" fill="#2d2625">主 KV / Wave 1 KV / Wave 2 KV</text>
+      <rect x="616" y="238" width="420" height="50" fill="#f8eee9" stroke="#d8cbc7"/>
+      <circle cx="642" cy="263" r="10" fill="#9f5a52"/>
+      <text x="666" y="271" font-size="19" fill="#2d2625">小红书笔记模板 6 套</text>
+      <rect x="136" y="316" width="420" height="50" fill="#f8eee9" stroke="#d8cbc7"/>
+      <circle cx="162" cy="341" r="10" fill="#9f5a52"/>
+      <text x="186" y="349" font-size="19" fill="#2d2625">抖音 15s / 30s 分镜模板</text>
+      <rect x="616" y="316" width="420" height="50" fill="#f8eee9" stroke="#d8cbc7"/>
+      <circle cx="642" cy="341" r="10" fill="#9f5a52"/>
+      <text x="666" y="349" font-size="19" fill="#2d2625">微博话题页与明星转发素材</text>
+      <rect x="136" y="394" width="420" height="50" fill="#f8eee9" stroke="#d8cbc7"/>
+      <circle cx="162" cy="419" r="10" fill="#9f5a52"/>
+      <text x="186" y="427" font-size="19" fill="#2d2625">天猫 / 抖音电商详情页模块</text>
+      <rect x="616" y="394" width="420" height="50" fill="#f8eee9" stroke="#d8cbc7"/>
+      <circle cx="642" cy="419" r="10" fill="#9f5a52"/>
+      <text x="666" y="427" font-size="19" fill="#2d2625">直播间脚本与货品卡</text>
+      <rect x="136" y="472" width="420" height="50" fill="#f8eee9" stroke="#d8cbc7"/>
+      <circle cx="162" cy="497" r="10" fill="#9f5a52"/>
+      <text x="186" y="505" font-size="19" fill="#2d2625">Café 门店包材 / 菜单 / 桌卡</text>
+      <rect x="616" y="472" width="420" height="50" fill="#f8eee9" stroke="#d8cbc7"/>
+      <circle cx="642" cy="497" r="10" fill="#9f5a52"/>
+      <text x="666" y="505" font-size="19" fill="#2d2625">礼盒开箱图 / GWP 组合图</text>
+      <rect x="136" y="550" width="420" height="50" fill="#f8eee9" stroke="#d8cbc7"/>
+      <circle cx="162" cy="575" r="10" fill="#9f5a52"/>
+      <text x="186" y="583" font-size="19" fill="#2d2625">达人 Brief / 审稿标准 / 风险清单</text>
+      <rect x="616" y="550" width="420" height="50" fill="#f8eee9" stroke="#d8cbc7"/>
+      <circle cx="642" cy="575" r="10" fill="#9f5a52"/>
+      <text x="666" y="583" font-size="19" fill="#2d2625">Dashboard 指标表与复盘模板</text>
+  </g>
+</svg>

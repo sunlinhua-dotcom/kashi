@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="主 KV Mockup">
+  <defs>
+    <linearGradient id="paper" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#fffaf8"/>
+      <stop offset="50%" stop-color="#f6d7cf"/>
+      <stop offset="100%" stop-color="#e0e6eb"/>
+    </linearGradient>
+    <linearGradient id="ink" x1="0%" x2="100%">
+      <stop offset="0%" stop-color="#2d2625"/>
+      <stop offset="100%" stop-color="#594743"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="38%" stop-color="#d7dce3"/>
+      <stop offset="72%" stop-color="#a8b0bc"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="24" stdDeviation="20" flood-color="#3b2d2b" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#paper)"/>
+  <path d="M0 632 C230 520 340 742 558 594 C756 460 910 586 1200 430 L1200 800 L0 800 Z" fill="#fff" opacity=".48"/>
+  
+  <g filter="url(#shadow)">
+    <rect x="78" y="76" width="1044" height="648" fill="#fffefd" stroke="#2d2625" stroke-width="4"/>
+    <rect x="106" y="104" width="988" height="592" fill="#f8eeea"/>
+    <circle cx="815" cy="384" r="245" fill="url(#metal)" opacity=".78"/>
+    <image href="product-mask.png" x="610" y="385" width="360" height="360" preserveAspectRatio="xMidYMid meet"/>
+    <image href="product-parfum.png" x="860" y="300" width="220" height="220" preserveAspectRatio="xMidYMid meet"/>
+    <image href="product-oil-packshot.png" x="778" y="150" width="190" height="190" preserveAspectRatio="xMidYMid meet"/>
+    <text x="156" y="188" font-family="Georgia, serif" font-size="34" fill="#2d2625">KÉRASTASE</text>
+    <text x="156" y="250" font-family="'PingFang SC', sans-serif" font-size="24" font-weight="700" fill="#9f5a52">GLOSSY GIRLS CLUB 2.0</text>
+    <text x="156" y="344" font-family="Georgia, 'Songti SC', serif" font-size="76" fill="#2d2625">一顺定高光</text>
+    <text x="156" y="432" font-family="Georgia, 'Songti SC', serif" font-size="76" fill="#2d2625">和她同闪耀</text>
+    <text x="160" y="500" font-family="'PingFang SC', sans-serif" font-size="24" fill="#6f6360">发膜深护 · 小粉珠补光 · 发香同闪</text>
+    <rect x="160" y="556" width="232" height="54" rx="27" fill="#2d2625"/>
+    <text x="276" y="591" text-anchor="middle" font-family="'PingFang SC', sans-serif" font-size="22" fill="#fff">7-8 月双波上市</text>
+  </g>
+</svg>
